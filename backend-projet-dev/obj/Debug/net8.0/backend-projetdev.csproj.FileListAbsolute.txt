@@ -1,0 +1,7 @@
+C:\Users\saber\source\repos\backend-projetdev\obj\Debug\net8.0\backend-projetdev.csproj.AssemblyReference.cache
+C:\Users\saber\source\repos\backend-projetdev\obj\Debug\net8.0\backend-projetdev.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\saber\source\repos\backend-projetdev\obj\Debug\net8.0\backend-projetdev.AssemblyInfoInputs.cache
+C:\Users\saber\source\repos\backend-projetdev\obj\Debug\net8.0\backend-projetdev.AssemblyInfo.cs
+C:\Users\saber\source\repos\backend-projetdev\obj\Debug\net8.0\backend-projetdev.csproj.CoreCompileInputs.cache
+C:\Users\saber\source\repos\backend-projetdev\obj\Debug\net8.0\backend-projetdev.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\saber\source\repos\backend-projetdev\obj\Debug\net8.0\backend-projetdev.MvcApplicationPartsAssemblyInfo.cache

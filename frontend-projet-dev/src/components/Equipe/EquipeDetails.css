@@ -1,0 +1,78 @@
+.equipe-detail-container {
+  padding: 20px;
+}
+
+.back-button {
+  background-color: #A7C7E7;
+  color: #333;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 6px 12px;
+}
+
+.equipe-card {
+  background-color: #B2E2B8;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.equipe-title {
+  color: #333;
+  font-weight: bold;
+}
+
+.equipe-subtitle {
+  color: #555;
+  margin-top: 5px;
+}
+
+.equipe-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.edit {
+  background-color: #A7C7E7;
+  color: #333;
+}
+
+.delete {
+  background-color: #F6C6D4;
+  color: #333;
+}
+
+.employes-list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.employe-card {
+  background-color: #D5C6E0;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.employe-title {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.details-button {
+  margin-top: 8px;
+  background-color: #A7C7E7;
+  color: #333;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}

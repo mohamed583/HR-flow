@@ -1,0 +1,20 @@
+{
+  "Version": 1,
+  "Hash": "a+Cycaz8tl5IiUvOf8bfgtNDlqzrkj6KkWpnSBRnwoA=",
+  "Source": "backend-projetdev.API",
+  "BasePath": "_content/backend-projetdev.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "backend-projetdev.API\\wwwroot",
+      "Source": "backend-projetdev.API",
+      "ContentRoot": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\",
+      "BasePath": "_content/backend-projetdev.API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [],
+  "Endpoints": []
+}

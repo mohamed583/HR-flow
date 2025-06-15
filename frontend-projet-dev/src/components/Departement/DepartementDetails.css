@@ -1,0 +1,98 @@
+.departement-detail-container {
+  padding: 32px;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.departement-card {
+  background-color: #a7c7e7;
+  color: #333;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.departement-title {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.departement-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  border-radius: 20px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.edit {
+  background-color: #b2e2b8;
+}
+
+.edit:hover {
+  background-color: #a0d9a9;
+}
+
+.delete {
+  background-color: #f6c6d4;
+}
+
+.delete:hover {
+  background-color: #e3b4c1;
+}
+
+.equipes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.equipe-card {
+  background-color: #d5c6e0;
+  color: #333;
+  border-radius: 12px;
+  padding: 16px;
+  width: 250px;
+}
+
+.equipe-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.details-button {
+  margin-top: 8px;
+  border-radius: 20px;
+  background-color: #a7c7e7;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: background-color 0.2s;
+}
+
+.details-button:hover {
+  background-color: #8bb3d6;
+}
+
+.access-denied-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.access-denied-message {
+  color: #333;
+  text-align: center;
+}

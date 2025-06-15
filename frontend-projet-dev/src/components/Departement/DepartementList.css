@@ -1,0 +1,75 @@
+/* DepartementList.css */
+.departement-card {
+  width: 260px;
+  background-color: #f8f8f8; /* Couleur pastel plus douce */
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Bordure fine et élégante */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.departement-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.departement-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3b3b3b;
+  margin-bottom: 8px;
+}
+
+.departement-info {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.details-button {
+  align-self: flex-start;
+  background-color: #a7c7e7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.details-button:hover {
+  background-color: #8ab5de;
+  transform: translateY(-1px);
+}
+
+.access-denied-container {
+  text-align: center;
+  padding: 40px;
+  background-color: #fff1b0;
+  border-radius: 16px;
+  max-width: 400px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.access-denied-container img {
+  max-width: 150px;
+  margin-bottom: 16px;
+}
+
+.access-denied-message {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}

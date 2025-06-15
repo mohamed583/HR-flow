@@ -1,0 +1,126 @@
+/* Palette pastel */
+:root {
+  --primary-color: #a7c7e7;
+  --secondary-color: #b2e2b8;
+  --accent-color: #f6c6d4;
+  --background-color: #f8f8f8;
+  --text-color: #333;
+  --highlight-color: #d5c6e0;
+  --border-color: #e5e5e5;
+}
+
+/* Conteneur principal */
+.equipe-container {
+  padding: 2rem;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+/* Titres */
+.equipe-title {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Conteneur des équipes */
+.equipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Carte d'équipe */
+.equipe-card {
+  flex: 1 1 250px;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.equipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Nom de l'équipe */
+.equipe-nom {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Infos sur l'équipe */
+.equipe-info {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Bouton de détails */
+.details-button {
+  background-color: var(--highlight-color);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.details-button:hover {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+/* Styles pour l'accès refusé */
+.access-denied-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.access-denied-container img {
+  width: 150px;
+  margin-bottom: 1.5rem;
+}
+
+.access-denied-message {
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Message de chargement */
+.loading-message {
+  color: var(--text-color);
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.create-button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.create-button:hover {
+  background-color: var(--primary-color);
+}

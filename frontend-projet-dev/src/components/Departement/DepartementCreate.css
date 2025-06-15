@@ -1,0 +1,31 @@
+.departement-create-container {
+  background-color: #f8f8f8;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.departement-create-title {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.departement-create-input .MuiOutlinedInput-root {
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+.departement-create-button {
+  background-color: #a7c7e7 !important;
+  color: #ffffff !important;
+  padding: 0.5rem 1.5rem !important;
+  border-radius: 20px !important;
+  transition: background-color 0.3s;
+}
+
+.departement-create-button:hover {
+  background-color: #8ab5de !important;
+}

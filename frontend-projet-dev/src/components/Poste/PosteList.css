@@ -1,0 +1,181 @@
+/* Centrage de la liste des postes et du message de vide */
+.poste-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Bouton de création de poste, visible seulement pour les Admins */
+.create-poste-button-container {
+  text-align: center;
+  margin-bottom: 30px; /* Espacement plus grand sous le bouton */
+}
+
+.create-poste-btn {
+  padding: 15px 25px; /* Plus de padding pour agrandir le bouton */
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem; /* Agrandir la taille de la police */
+  transition: background-color 0.3s ease;
+}
+
+.create-poste-btn:hover {
+  background-color: #357ab7;
+}
+
+/* Centrer le message et l'illustration quand il n'y a pas de postes */
+.no-postes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  background-color: #f1f7fb;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+  text-align: center;
+}
+
+.no-postes-message {
+  font-size: 1.8rem; /* Taille du texte agrandie */
+  font-weight: bold;
+  color: #7f8c8d;
+  margin-top: 20px;
+}
+
+.no-postes-submessage {
+  font-size: 1.1rem; /* Taille du texte agrandie */
+  color: #b3b6b7;
+  margin-top: 10px;
+}
+
+.no-postes-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-postes-img {
+  width: 140px; /* Image légèrement plus grande */
+  height: 140px;
+  object-fit: contain;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style de la table et des boutons */
+.table {
+  width: 80%; /* Augmenter la largeur du tableau */
+  margin: 20px auto; /* Centrer la table et ajouter un espacement */
+  border-collapse: collapse;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 20px 30px; /* Espacement plus grand pour plus d'aération */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem; /* Agrandir légèrement la taille de la police */
+}
+
+.table th {
+  background-color: #f4f7fb;
+  color: #5c6e91;
+  font-weight: 600;
+}
+
+.table td {
+  background-color: #fff;
+  color: #555;
+}
+
+.table tr:hover {
+  background-color: #f1f5f9;
+}
+
+.table-row {
+  transition: background-color 0.3s ease;
+}
+
+.table-row:hover {
+  background-color: #f9fafb;
+}
+
+.page-title {
+  color: #4a90e2;
+  font-size: 32px; /* Taille du titre plus grande */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 8px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #357ab7;
+}
+
+/* Animation de chargement */
+.loading {
+  font-size: 20px;
+  color: #aaa;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animated {
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+}

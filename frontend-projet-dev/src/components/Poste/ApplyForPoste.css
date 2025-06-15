@@ -1,0 +1,75 @@
+/* src/components/Poste/ApplyForPoste.css */
+.apply-for-poste-container {
+  background-color: #e5e5e5; /* Gris clair pastel */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.apply-for-poste-container h2 {
+  color: #a7c7e7; /* Bleu clair pastel */
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.apply-for-poste-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.apply-for-poste-container label {
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.apply-for-poste-container input[type="file"] {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.apply-for-poste-container input[type="file"]:focus {
+  border-color: #a7c7e7; /* Bleu clair pastel */
+}
+
+.apply-for-poste-container button {
+  padding: 0.8rem 1.5rem;
+  background-color: #b2e2b8; /* Vert clair pastel */
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.apply-for-poste-container button:hover {
+  background-color: #99d7a1; /* Vert clair pastel plus foncé */
+}
+
+.apply-for-poste-container .error {
+  color: #f6c6d4; /* Rose pastel doux */
+  font-size: 1rem;
+  background-color: #f6c6d4;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.apply-for-poste-container .success {
+  color: #fff;
+  background-color: #b2e2b8; /* Vert clair pastel */
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}

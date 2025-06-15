@@ -1,0 +1,41 @@
+.candidature-list-container {
+  background-color: #e5e5e5; /* Gris clair pastel */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.candidature-list-container h2 {
+  color: #a7c7e7; /* Bleu clair pastel */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.candidature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.candidature-item {
+  background-color: #fff;
+  border-left: 4px solid #b2e2b8; /* Vert clair pastel */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.candidature-item p {
+  margin: 0.5rem 0;
+}
+
+.candidature-item a {
+  color: #d5c6e0; /* Violet pastel léger */
+  text-decoration: none;
+}
+
+.candidature-item a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,1278 @@
+[
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.AuthController",
+    "Method": "ChangeLoginInfo",
+    "RelativePath": "auth/ChangeLoginInfo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Auth.Commands.ChangeLoginInfoCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Auth.Commands.LoginCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Auth.Commands.LogoutCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.AuthController",
+    "Method": "GetMe",
+    "RelativePath": "auth/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.AuthController",
+    "Method": "Refresh",
+    "RelativePath": "auth/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Auth.Commands.RefreshTokenCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Auth.Commands.RegisterCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CandidatureController",
+    "Method": "GetCandidaturesByPosteId",
+    "RelativePath": "candidature/candidatures/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CandidatureController",
+    "Method": "GetDetails",
+    "RelativePath": "candidature/details/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CandidatureController",
+    "Method": "DownloadCv",
+    "RelativePath": "candidature/download-cv/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CandidatureController",
+    "Method": "GetMesCandidatures",
+    "RelativePath": "candidature/mes-candidatures",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CandidatureController",
+    "Method": "ModifierStatut",
+    "RelativePath": "candidature/modifier-statut/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CandidatureController",
+    "Method": "SupprimerCandidature",
+    "RelativePath": "candidature/supprimer-candidature/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CandidatureController",
+    "Method": "TransformationEmploye",
+    "RelativePath": "candidature/transformation-employe",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "backend_projetdev.Application.DTOs.TransformationEmployeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CongeController",
+    "Method": "Create",
+    "RelativePath": "conge",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "backend_projetdev.Application.DTOs.CreateCongeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CongeController",
+    "Method": "GetAllConges",
+    "RelativePath": "conge",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CongeController",
+    "Method": "Delete",
+    "RelativePath": "conge/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CongeController",
+    "Method": "GetMesConges",
+    "RelativePath": "conge/mes-conges",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CongeController",
+    "Method": "ModifierStatusConge",
+    "RelativePath": "conge/status/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "NewStatus",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.DepartementController",
+    "Method": "GetDepartements",
+    "RelativePath": "department",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.DepartementController",
+    "Method": "CreateDepartement",
+    "RelativePath": "department",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "backend_projetdev.Application.DTOs.DepartementDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.DepartementController",
+    "Method": "UpdateDepartement",
+    "RelativePath": "department/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "backend_projetdev.Application.DTOs.DepartementDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.DepartementController",
+    "Method": "DeleteDepartement",
+    "RelativePath": "department/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.DepartementController",
+    "Method": "GetDepartementDetails",
+    "RelativePath": "department/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EmployeController",
+    "Method": "Delete",
+    "RelativePath": "employe/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EmployeController",
+    "Method": "Edit",
+    "RelativePath": "employe/{id}/edit",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Employe.Commands.EditEmployeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EmployeController",
+    "Method": "ChangerStatut",
+    "RelativePath": "employe/changer-statut",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Employe.Commands.ChangerStatutCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EmployeController",
+    "Method": "GetDetails",
+    "RelativePath": "employe/details/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EmployeController",
+    "Method": "GetByEquipe",
+    "RelativePath": "employe/equipe/{equipeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "equipeId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EmployeController",
+    "Method": "ListeEquipe",
+    "RelativePath": "employe/liste-equipe",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EntretienController",
+    "Method": "Create",
+    "RelativePath": "entretien",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Entretien.Commands.CreateEntretienCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EntretienController",
+    "Method": "GetDetails",
+    "RelativePath": "entretien/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EntretienController",
+    "Method": "GetByCandidature",
+    "RelativePath": "entretien/Candidature/{candidatureId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "candidatureId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EntretienController",
+    "Method": "Complete",
+    "RelativePath": "entretien/Complete/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Entretien.Commands.CompleteEntretienCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EntretienController",
+    "Method": "GetForEmploye",
+    "RelativePath": "entretien/Employe",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EntretienController",
+    "Method": "GetNonFinalizedForEmploye",
+    "RelativePath": "entretien/Employe/NonFinalise",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EquipeController",
+    "Method": "Create",
+    "RelativePath": "equipe",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Equipe.Commands.CreateEquipeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EquipeController",
+    "Method": "GetById",
+    "RelativePath": "equipe/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EquipeController",
+    "Method": "Update",
+    "RelativePath": "equipe/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Equipe.Commands.UpdateEquipeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EquipeController",
+    "Method": "Delete",
+    "RelativePath": "equipe/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EquipeController",
+    "Method": "GetByDepartement",
+    "RelativePath": "equipe/Departement/{departementId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "departementId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EvaluationController",
+    "Method": "GetEvaluations",
+    "RelativePath": "evaluation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EvaluationController",
+    "Method": "CreateEvaluation",
+    "RelativePath": "evaluation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Evaluation.Commands.CreateEvaluationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EvaluationController",
+    "Method": "GetEvaluationById",
+    "RelativePath": "evaluation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EvaluationController",
+    "Method": "DeleteEvaluation",
+    "RelativePath": "evaluation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EvaluationController",
+    "Method": "Approuver",
+    "RelativePath": "evaluation/approuver/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "approuve",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EvaluationController",
+    "Method": "FinaliserParEmploye",
+    "RelativePath": "evaluation/finaliserParEmploye/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParEmployeCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EvaluationController",
+    "Method": "FinaliserParManager",
+    "RelativePath": "evaluation/finaliserParManager/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParManagerCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EvaluationController",
+    "Method": "LancerCampagne",
+    "RelativePath": "evaluation/lancerCampagne",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EvaluationController",
+    "Method": "GetMyEvaluations",
+    "RelativePath": "evaluation/mesEvaluations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormateurController",
+    "Method": "CreateFormateur",
+    "RelativePath": "formateur",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Formateur.Commands.CreateFormateurCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormateurController",
+    "Method": "GetFormateurs",
+    "RelativePath": "formateur",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormateurController",
+    "Method": "GetFormateur",
+    "RelativePath": "formateur/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormateurController",
+    "Method": "EditFormateur",
+    "RelativePath": "formateur/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Formateur.Commands.EditFormateurCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormateurController",
+    "Method": "DeleteFormateur",
+    "RelativePath": "formateur/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormationController",
+    "Method": "CreateFormation",
+    "RelativePath": "formation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Formation.Commands.CreateFormationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormationController",
+    "Method": "GetFormation",
+    "RelativePath": "formation/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormationController",
+    "Method": "UpdateFormation",
+    "RelativePath": "formation/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Formation.Commands.UpdateFormationCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormationController",
+    "Method": "DeleteFormation",
+    "RelativePath": "formation/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormationController",
+    "Method": "GetFormationsByFormateur",
+    "RelativePath": "formation/formateur/{formateurId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "formateurId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.InscriptionController",
+    "Method": "SupprimerInscription",
+    "RelativePath": "inscription/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.InscriptionController",
+    "Method": "ApproveInscription",
+    "RelativePath": "inscription/{id}/approve",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.InscriptionController",
+    "Method": "RejectInscription",
+    "RelativePath": "inscription/{id}/reject",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.InscriptionController",
+    "Method": "GetInscriptionsByFormation",
+    "RelativePath": "inscription/formation/{formationId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "formationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "backend_projetdev.Application.Common.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[backend_projetdev.Application.DTOs.InscriptionDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.InscriptionController",
+    "Method": "GetFormationsDisponibles",
+    "RelativePath": "inscription/formations-disponibles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "backend_projetdev.Application.Common.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[backend_projetdev.Application.DTOs.FormationDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.InscriptionController",
+    "Method": "GetFormationsEtInscriptions",
+    "RelativePath": "inscription/mes-formations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "backend_projetdev.Application.Common.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[backend_projetdev.Application.DTOs.FormationDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.InscriptionController",
+    "Method": "GetMesInscriptions",
+    "RelativePath": "inscription/mes-inscriptions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "backend_projetdev.Application.Common.Result\u00601[[System.Collections.Generic.IEnumerable\u00601[[backend_projetdev.Application.DTOs.InscriptionDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.InscriptionController",
+    "Method": "Postuler",
+    "RelativePath": "inscription/postuler/{formationId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "formationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PaieController",
+    "Method": "GetAll",
+    "RelativePath": "paie",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PaieController",
+    "Method": "Create",
+    "RelativePath": "paie",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Paie.Commands.CreatePaieCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PaieController",
+    "Method": "GetById",
+    "RelativePath": "paie/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PaieController",
+    "Method": "EffectuerPaiePourTous",
+    "RelativePath": "paie/effectuer-tous-employes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PaieController",
+    "Method": "GetMesPaies",
+    "RelativePath": "paie/mes-paies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PosteController",
+    "Method": "GetAll",
+    "RelativePath": "poste",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PosteController",
+    "Method": "Create",
+    "RelativePath": "poste",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Poste.Commands.CreatePosteCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PosteController",
+    "Method": "Get",
+    "RelativePath": "poste/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PosteController",
+    "Method": "Update",
+    "RelativePath": "poste/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "backend_projetdev.Application.UseCases.Poste.Commands.UpdatePosteCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PosteController",
+    "Method": "Delete",
+    "RelativePath": "poste/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PosteController",
+    "Method": "Apply",
+    "RelativePath": "poste/{id}/apply",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "cvFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PosteController",
+    "Method": "GetCandidatures",
+    "RelativePath": "poste/{id}/candidatures",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.PosteController",
+    "Method": "ModifierStatut",
+    "RelativePath": "poste/statut/{id}",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,44 @@
+.edit-equipe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F8F8F8;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.edit-equipe-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.edit-equipe-title {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.edit-equipe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-field {
+  background-color: #ffffff;
+}
+
+.edit-equipe-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.access-denied {
+  text-align: center;
+  color: #F6C6D4;
+}

@@ -1,0 +1,2762 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "HR flow API",
+    "version": "v1"
+  },
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.LoginCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.LoginCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.LoginCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.RegisterCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.RegisterCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.RegisterCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.LogoutCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.LogoutCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.LogoutCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/auth/refresh": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.RefreshTokenCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.RefreshTokenCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.RefreshTokenCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/auth/ChangeLoginInfo": {
+      "put": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.ChangeLoginInfoCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.ChangeLoginInfoCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Auth.Commands.ChangeLoginInfoCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/auth/me": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/candidature/candidatures/{id}": {
+      "get": {
+        "tags": [
+          "Candidature"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/candidature/mes-candidatures": {
+      "get": {
+        "tags": [
+          "Candidature"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/candidature/details/{id}": {
+      "get": {
+        "tags": [
+          "Candidature"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/candidature/modifier-statut/{id}": {
+      "post": {
+        "tags": [
+          "Candidature"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.Status"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.Status"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.Status"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/candidature/supprimer-candidature/{id}": {
+      "delete": {
+        "tags": [
+          "Candidature"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/candidature/download-cv/{id}": {
+      "get": {
+        "tags": [
+          "Candidature"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/candidature/transformation-employe": {
+      "post": {
+        "tags": [
+          "Candidature"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.TransformationEmployeDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.TransformationEmployeDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.TransformationEmployeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/conge": {
+      "post": {
+        "tags": [
+          "Conge"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.CreateCongeDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.CreateCongeDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.CreateCongeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Conge"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/conge/mes-conges": {
+      "get": {
+        "tags": [
+          "Conge"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/conge/status/{id}": {
+      "put": {
+        "tags": [
+          "Conge"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.Status"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.Status"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.Status"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/conge/{id}": {
+      "delete": {
+        "tags": [
+          "Conge"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/department": {
+      "get": {
+        "tags": [
+          "Departement"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Departement"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.DepartementDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.DepartementDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.DepartementDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/department/{id}": {
+      "put": {
+        "tags": [
+          "Departement"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.DepartementDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.DepartementDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.DepartementDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Departement"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Departement"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/employe/equipe/{equipeId}": {
+      "get": {
+        "tags": [
+          "Employe"
+        ],
+        "parameters": [
+          {
+            "name": "equipeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/employe/{id}/edit": {
+      "put": {
+        "tags": [
+          "Employe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Employe.Commands.EditEmployeCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Employe.Commands.EditEmployeCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Employe.Commands.EditEmployeCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/employe/{id}": {
+      "delete": {
+        "tags": [
+          "Employe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/employe/details/{id}": {
+      "get": {
+        "tags": [
+          "Employe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/employe/changer-statut": {
+      "put": {
+        "tags": [
+          "Employe"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Employe.Commands.ChangerStatutCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Employe.Commands.ChangerStatutCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Employe.Commands.ChangerStatutCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/employe/liste-equipe": {
+      "get": {
+        "tags": [
+          "Employe"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/entretien": {
+      "post": {
+        "tags": [
+          "Entretien"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Entretien.Commands.CreateEntretienCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Entretien.Commands.CreateEntretienCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Entretien.Commands.CreateEntretienCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/entretien/Candidature/{candidatureId}": {
+      "get": {
+        "tags": [
+          "Entretien"
+        ],
+        "parameters": [
+          {
+            "name": "candidatureId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/entretien/{id}": {
+      "get": {
+        "tags": [
+          "Entretien"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/entretien/Employe": {
+      "get": {
+        "tags": [
+          "Entretien"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/entretien/Employe/NonFinalise": {
+      "get": {
+        "tags": [
+          "Entretien"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/entretien/Complete/{id}": {
+      "put": {
+        "tags": [
+          "Entretien"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Entretien.Commands.CompleteEntretienCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Entretien.Commands.CompleteEntretienCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Entretien.Commands.CompleteEntretienCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/equipe/Departement/{departementId}": {
+      "get": {
+        "tags": [
+          "Equipe"
+        ],
+        "parameters": [
+          {
+            "name": "departementId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/equipe/{id}": {
+      "get": {
+        "tags": [
+          "Equipe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Equipe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Equipe.Commands.UpdateEquipeCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Equipe.Commands.UpdateEquipeCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Equipe.Commands.UpdateEquipeCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Equipe"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/equipe": {
+      "post": {
+        "tags": [
+          "Equipe"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Equipe.Commands.CreateEquipeCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Equipe.Commands.CreateEquipeCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Equipe.Commands.CreateEquipeCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/evaluation": {
+      "get": {
+        "tags": [
+          "Evaluation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Evaluation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Evaluation.Commands.CreateEvaluationCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Evaluation.Commands.CreateEvaluationCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Evaluation.Commands.CreateEvaluationCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/evaluation/{id}": {
+      "get": {
+        "tags": [
+          "Evaluation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Evaluation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/evaluation/mesEvaluations": {
+      "get": {
+        "tags": [
+          "Evaluation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/evaluation/finaliserParEmploye/{id}": {
+      "put": {
+        "tags": [
+          "Evaluation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParEmployeCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParEmployeCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParEmployeCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/evaluation/finaliserParManager/{id}": {
+      "put": {
+        "tags": [
+          "Evaluation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParManagerCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParManagerCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParManagerCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/evaluation/approuver/{id}": {
+      "put": {
+        "tags": [
+          "Evaluation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "approuve",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/evaluation/lancerCampagne": {
+      "post": {
+        "tags": [
+          "Evaluation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/formateur": {
+      "post": {
+        "tags": [
+          "Formateur"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formateur.Commands.CreateFormateurCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formateur.Commands.CreateFormateurCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formateur.Commands.CreateFormateurCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Formateur"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/formateur/{id}": {
+      "get": {
+        "tags": [
+          "Formateur"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Formateur"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formateur.Commands.EditFormateurCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formateur.Commands.EditFormateurCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formateur.Commands.EditFormateurCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Formateur"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/formation/formateur/{formateurId}": {
+      "get": {
+        "tags": [
+          "Formation"
+        ],
+        "parameters": [
+          {
+            "name": "formateurId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/formation/{id}": {
+      "get": {
+        "tags": [
+          "Formation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Formation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formation.Commands.UpdateFormationCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formation.Commands.UpdateFormationCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formation.Commands.UpdateFormationCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Formation"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/formation": {
+      "post": {
+        "tags": [
+          "Formation"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formation.Commands.CreateFormationCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formation.Commands.CreateFormationCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Formation.Commands.CreateFormationCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/inscription/formation/{formationId}": {
+      "get": {
+        "tags": [
+          "Inscription"
+        ],
+        "parameters": [
+          {
+            "name": "formationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.InscriptionDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.InscriptionDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.InscriptionDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/inscription/{id}/approve": {
+      "post": {
+        "tags": [
+          "Inscription"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/inscription/{id}/reject": {
+      "post": {
+        "tags": [
+          "Inscription"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/inscription/formations-disponibles": {
+      "get": {
+        "tags": [
+          "Inscription"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.FormationDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.FormationDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.FormationDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/inscription/postuler/{formationId}": {
+      "post": {
+        "tags": [
+          "Inscription"
+        ],
+        "parameters": [
+          {
+            "name": "formationId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/inscription/mes-inscriptions": {
+      "get": {
+        "tags": [
+          "Inscription"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.InscriptionDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.InscriptionDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.InscriptionDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/inscription/{id}": {
+      "delete": {
+        "tags": [
+          "Inscription"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/inscription/mes-formations": {
+      "get": {
+        "tags": [
+          "Inscription"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.FormationDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.FormationDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.FormationDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/paie": {
+      "get": {
+        "tags": [
+          "Paie"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Paie"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Paie.Commands.CreatePaieCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Paie.Commands.CreatePaieCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Paie.Commands.CreatePaieCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/paie/mes-paies": {
+      "get": {
+        "tags": [
+          "Paie"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/paie/{id}": {
+      "get": {
+        "tags": [
+          "Paie"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/paie/effectuer-tous-employes": {
+      "post": {
+        "tags": [
+          "Paie"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/poste": {
+      "get": {
+        "tags": [
+          "Poste"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Poste"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Poste.Commands.CreatePosteCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Poste.Commands.CreatePosteCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Poste.Commands.CreatePosteCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/poste/{id}": {
+      "get": {
+        "tags": [
+          "Poste"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Poste"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Poste.Commands.UpdatePosteCommand"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Poste.Commands.UpdatePosteCommand"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/backend_projetdev.Application.UseCases.Poste.Commands.UpdatePosteCommand"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Poste"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/poste/statut/{id}": {
+      "patch": {
+        "tags": [
+          "Poste"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.StatutPoste"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/poste/{id}/candidatures": {
+      "get": {
+        "tags": [
+          "Poste"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/poste/{id}/apply": {
+      "post": {
+        "tags": [
+          "Poste"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cvFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "cvFile": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.FormationDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.FormationDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.Common.Result`1[[System.Collections.Generic.IEnumerable`1[[backend_projetdev.Application.DTOs.InscriptionDto, backend-projetdev.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.InscriptionDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.ChangeLoginInfoDto": {
+        "type": "object",
+        "properties": {
+          "newEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPassword": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.CreateCongeDto": {
+        "type": "object",
+        "properties": {
+          "dateDebut": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.DepartementDto": {
+        "type": "object",
+        "properties": {
+          "nom": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.EditEmployeDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "nom": {
+            "type": "string",
+            "nullable": true
+          },
+          "prenom": {
+            "type": "string",
+            "nullable": true
+          },
+          "salaire": {
+            "type": "number",
+            "format": "double"
+          },
+          "metier": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateEmbauche": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "contrat": {
+            "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.StatutContractuel"
+          },
+          "statut": {
+            "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.StatutEmploi"
+          },
+          "equipeId": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "estManager": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.EditFormateurDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "nom": {
+            "type": "string",
+            "nullable": true
+          },
+          "prenom": {
+            "type": "string",
+            "nullable": true
+          },
+          "domaine": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "salaire": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.EntretienCompleteDto": {
+        "type": "object",
+        "properties": {
+          "commentaire": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.EntretienCreateDto": {
+        "type": "object",
+        "properties": {
+          "candidatureId": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateEntretien": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.FormationDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "titre": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateDebut": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "formateurId": {
+            "type": "string",
+            "nullable": true
+          },
+          "cout": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.InscriptionDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "employeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "nomEmploye": {
+            "type": "string",
+            "nullable": true
+          },
+          "formationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dateInscription": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "statut": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.ManagePosteDto": {
+        "type": "object",
+        "properties": {
+          "nom": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "statutPoste": {
+            "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.StatutPoste"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.RegisterFormateurDto": {
+        "type": "object",
+        "properties": {
+          "nom": {
+            "type": "string",
+            "nullable": true
+          },
+          "prenom": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "domaine": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "salaire": {
+            "type": "number",
+            "format": "double"
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.DTOs.TransformationEmployeDto": {
+        "type": "object",
+        "properties": {
+          "candidatureId": {
+            "type": "string",
+            "nullable": true
+          },
+          "candidatId": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "metier": {
+            "type": "string",
+            "nullable": true
+          },
+          "salaire": {
+            "type": "number",
+            "format": "double"
+          },
+          "adresse": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateNaissance": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "equipeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "contrat": {
+            "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.StatutContractuel"
+          },
+          "estManager": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Auth.Commands.ChangeLoginInfoCommand": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "data": {
+            "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.ChangeLoginInfoDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Auth.Commands.LoginCommand": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Auth.Commands.LogoutCommand": {
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Auth.Commands.RefreshTokenCommand": {
+        "type": "object",
+        "properties": {
+          "refreshToken": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Auth.Commands.RegisterCommand": {
+        "type": "object",
+        "properties": {
+          "nom": {
+            "type": "string",
+            "nullable": true
+          },
+          "prenom": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Employe.Commands.ChangerStatutCommand": {
+        "type": "object",
+        "properties": {
+          "statut": {
+            "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.StatutEmploi"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Employe.Commands.EditEmployeCommand": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.EditEmployeDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Entretien.Commands.CompleteEntretienCommand": {
+        "type": "object",
+        "properties": {
+          "entretienId": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.EntretienCompleteDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Entretien.Commands.CreateEntretienCommand": {
+        "type": "object",
+        "properties": {
+          "model": {
+            "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.EntretienCreateDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Equipe.Commands.CreateEquipeCommand": {
+        "type": "object",
+        "properties": {
+          "nom": {
+            "type": "string",
+            "nullable": true
+          },
+          "departementId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Equipe.Commands.UpdateEquipeCommand": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nom": {
+            "type": "string",
+            "nullable": true
+          },
+          "departementId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Evaluation.Commands.CreateEvaluationCommand": {
+        "type": "object",
+        "properties": {
+          "employeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateEvaluation": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "objectifs": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParEmployeCommand": {
+        "type": "object",
+        "properties": {
+          "evaluationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "commentairesEmploye": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Evaluation.Commands.FinaliserParManagerCommand": {
+        "type": "object",
+        "properties": {
+          "evaluationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "commentairesResponsable": {
+            "type": "string",
+            "nullable": true
+          },
+          "note": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Formateur.Commands.CreateFormateurCommand": {
+        "type": "object",
+        "properties": {
+          "formateur": {
+            "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.RegisterFormateurDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Formateur.Commands.EditFormateurCommand": {
+        "type": "object",
+        "properties": {
+          "formateur": {
+            "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.EditFormateurDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Formation.Commands.CreateFormationCommand": {
+        "type": "object",
+        "properties": {
+          "titre": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateDebut": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "formateurId": {
+            "type": "string",
+            "nullable": true
+          },
+          "cout": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Formation.Commands.UpdateFormationCommand": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "titre": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateDebut": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "dateFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "formateurId": {
+            "type": "string",
+            "nullable": true
+          },
+          "cout": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Paie.Commands.CreatePaieCommand": {
+        "type": "object",
+        "properties": {
+          "personneId": {
+            "type": "string",
+            "nullable": true
+          },
+          "datePaie": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "montant": {
+            "type": "number",
+            "format": "double"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "avantages": {
+            "type": "string",
+            "nullable": true
+          },
+          "retenues": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Poste.Commands.CreatePosteCommand": {
+        "type": "object",
+        "properties": {
+          "information": {
+            "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.ManagePosteDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Application.UseCases.Poste.Commands.UpdatePosteCommand": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dto": {
+            "$ref": "#/components/schemas/backend_projetdev.Application.DTOs.ManagePosteDto"
+          }
+        },
+        "additionalProperties": false
+      },
+      "backend_projetdev.Domain.Enums.Status": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "backend_projetdev.Domain.Enums.StatutContractuel": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "backend_projetdev.Domain.Enums.StatutEmploi": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "backend_projetdev.Domain.Enums.StatutPoste": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Entrez 'Bearer' suivi d'un espace et du token JWT.\nEx: \"Bearer eyJhb...\"",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

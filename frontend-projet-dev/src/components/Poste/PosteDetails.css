@@ -1,0 +1,185 @@
+/* Container principal */
+.poste-details-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titre */
+.poste-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4f4f4f;
+  margin-bottom: 20px;
+}
+
+/* Carte du poste */
+.poste-details-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.poste-info {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #4f4f4f;
+}
+
+.poste-info strong {
+  color: #6a6a6a;
+}
+
+/* Actions admin */
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.admin-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-actions button:hover {
+  opacity: 0.8;
+}
+
+.admin-actions .btn-primary {
+  background-color: #a7c7e7; /* Bleu clair pastel */
+  color: white;
+}
+
+.admin-actions .btn-danger {
+  background-color: #f6c6d4; /* Rose pastel */
+  color: white;
+}
+
+.admin-actions .btn-info {
+  background-color: #b2e2b8; /* Vert pastel */
+  color: white;
+}
+
+.status-select {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.status-select label {
+  font-size: 1rem;
+  margin-right: 10px;
+  color: #6a6a6a;
+}
+
+.status-select select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  font-size: 1rem;
+}
+
+/* Bouton postuler */
+.btn-success {
+  background-color: #fff1b0; /* Jaune pastel */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn-success:hover {
+  opacity: 0.8;
+}
+
+/* Animation de fade-in */
+.poste-details-card {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Modal de confirmation */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-actions .btn-danger {
+  background-color: #f6c6d4; /* Rose pastel */
+  color: white;
+}
+
+.modal-actions .btn-secondary {
+  background-color: #e0e0e0; /* Gris clair */
+  color: #4f4f4f;
+}
+
+.modal-actions button:hover {
+  opacity: 0.8;
+}
