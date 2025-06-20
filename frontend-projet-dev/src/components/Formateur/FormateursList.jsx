@@ -7,6 +7,7 @@ import { Box, Card, Typography, Button } from "@mui/material";
 import { FiArrowRight, FiPlus } from "react-icons/fi";
 import { toast } from "react-toastify";
 import "./FormateursList.css";
+import AccessDeniedImage from "../../assets/accessDenied.png";
 
 const pastelColors = {
   primary: "#A7C7E7",
@@ -45,7 +46,12 @@ const FormateurList = () => {
   if (!isAdmin) {
     return (
       <Box className="access-denied-container">
-        <Typography variant="h5" className="access-denied-message">
+        <img src={AccessDeniedImage} alt="Accès refusé" />
+        <Typography
+          variant="h5"
+          className="access-denied-message"
+          sx={{ mb: 2 }}
+        >
           Accès refusé
         </Typography>
         <Typography className="access-denied-message">

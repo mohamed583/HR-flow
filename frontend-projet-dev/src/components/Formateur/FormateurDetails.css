@@ -1,0 +1,59 @@
+.formateur-detail-container {
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+
+.formateur-card {
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: #e5e5e5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.formateur-title {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.formateur-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.action-button {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  text-transform: none;
+  background-color: #a7c7e7;
+  color: #000;
+}
+
+.action-button.submit {
+  background-color: #b2e2b8;
+}
+
+.action-button.reset {
+  background-color: #f6c6d4;
+}
+
+.formation-section-title {
+  margin-top: 2rem;
+  color: #333;
+}
+
+.formation-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #fff1b0;
+  border-radius: 12px;
+}
+
+.details-button {
+  background-color: #d5c6e0;
+  color: #000;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+}

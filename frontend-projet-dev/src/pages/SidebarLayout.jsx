@@ -37,6 +37,8 @@ const SidebarLayout = () => {
   const [mobileOpen, setMobileOpen] = useState(window.innerWidth >= 600);
   const [isAdmin, setIsAdmin] = useState(false);
   const [organisationOpen, setOrganisationOpen] = useState(false);
+  const [isCandidat, setIsCandidat] = useState(false);
+  const [isEmploye, setIsEmploye] = useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -66,17 +68,73 @@ const SidebarLayout = () => {
         />
       ),
     },
-    {
-      text: "Postes",
-      path: "/Postes",
-      icon: (
-        <img
-          src={"src/assets/job.png"}
-          alt="Job"
-          style={{ width: 24, height: 24 }}
-        />
-      ),
-    },
+    ...(isCandidat || isAdmin
+      ? [
+          {
+            text: "Postes",
+            path: "/Postes",
+            icon: (
+              <img
+                src={"src/assets/job.png"}
+                alt="Job"
+                style={{ width: 24, height: 24 }}
+              />
+            ),
+          },
+        ]
+      : []),
+    ...(!isCandidat
+      ? [
+          {
+            text: "Formations",
+            path: "/formations",
+            icon: (
+              <img
+                src={"src/assets/training.png"}
+                alt="Formation"
+                style={{ width: 24, height: 24 }}
+              />
+            ),
+          },
+        ]
+      : []),
+    ...(isEmploye
+      ? [
+          {
+            text: "Inscriptions",
+            path: "/mes-inscriptions",
+            icon: (
+              <img
+                src={"src/assets/inscription.png"}
+                alt="Inscription"
+                style={{ width: 24, height: 24 }}
+              />
+            ),
+          },
+          {
+            text: "Congés",
+            path: "/conges",
+            icon: (
+              <img
+                src={"src/assets/conge.png"}
+                alt="Conge"
+                style={{ width: 24, height: 24 }}
+              />
+            ),
+          },
+          {
+            text: "Evaluations",
+            path: "/evaluations",
+            icon: (
+              <img
+                src={"src/assets/evaluation.png"}
+                alt="Evaluation"
+                style={{ width: 24, height: 24 }}
+              />
+            ),
+          },
+        ]
+      : []),
   ];
 
   const organisationItems = [
@@ -93,6 +151,12 @@ const SidebarLayout = () => {
         const user = await getMe();
         if (user && user.roles.includes("Admin")) {
           setIsAdmin(true);
+        }
+        if (user.roles.includes("Candidat")) {
+          setIsCandidat(true);
+        }
+        if (user.roles.includes("Employe")) {
+          setIsEmploye(true);
         }
       } catch (error) {
         console.error("Erreur lors de la récupération du rôle :", error);

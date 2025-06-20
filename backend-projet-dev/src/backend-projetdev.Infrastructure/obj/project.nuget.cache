@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w+DDXemt4vY=",
+  "dgSpecHash": "psAXoZXf0lg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mouha\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\mouha\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

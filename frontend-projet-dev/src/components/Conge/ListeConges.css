@@ -1,0 +1,87 @@
+.conge-list-container {
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+
+.title {
+  color: #333;
+  margin: 1.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.conge-card {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.conge-card:hover {
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+.btn-create {
+  background-color: #a7c7e7;
+  color: #333;
+  border: 2px solid #1976d2;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.btn-create:hover {
+  background-color: #91b7d7;
+}
+
+.btn-approve,
+.btn-reject,
+.btn-delete {
+  font-weight: 600;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  border: 2px solid #a19f9f;
+  margin-right: 0.5rem;
+  margin-top: 0.7rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-approve {
+  background-color: #b2e2b8;
+  color: #333;
+}
+
+.btn-approve:hover {
+  background-color: #98d8a6;
+}
+
+.btn-reject {
+  background-color: #f6c6d4;
+  color: #333;
+}
+
+.btn-reject:hover {
+  background-color: #f1b9c8;
+}
+
+.btn-delete {
+  background-color: #fff1b0;
+  color: #333;
+}
+
+.btn-delete:hover {
+  background-color: #ffe88a;
+}
+
+.access-denied-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.access-denied-message {
+  color: #333;
+  margin-top: 1rem;
+}

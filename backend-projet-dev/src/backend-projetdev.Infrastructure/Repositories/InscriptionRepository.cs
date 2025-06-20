@@ -124,10 +124,10 @@ namespace backend_projetdev.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Result> SupprimerInscriptionAsync(int id, string employeId)
+        public async Task<Result> SupprimerInscriptionAsync(int id)
         {
             var inscription = await _context.Inscriptions
-                .FirstOrDefaultAsync(i => i.Id == id && i.EmployeId == employeId);
+                .FirstOrDefaultAsync(i => i.Id == id);
 
             if (inscription == null)
                 return Result.Failure("Inscription introuvable ou non autorisée.");

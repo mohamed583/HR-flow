@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {}
+    "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {
+    "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj",
         "projectName": "backend-projetdev.Domain",
-        "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj",
+        "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj",
         "packagesPath": "C:\\Users\\mouha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\obj\\",
+        "outputPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

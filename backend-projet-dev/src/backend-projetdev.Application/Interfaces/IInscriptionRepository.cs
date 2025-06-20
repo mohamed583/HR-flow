@@ -17,7 +17,7 @@ namespace backend_projetdev.Application.Interfaces
         Task<List<FormationDto>> GetFormationsDisponiblesAsync(string employeId);
         Task<Result> PostulerAsync(int formationId, string employeId);
         Task<List<InscriptionDto>> GetMesInscriptionsAsync(string employeId);
-        Task<Result> SupprimerInscriptionAsync(int id, string employeId);
+        Task<Result> SupprimerInscriptionAsync(int id);
         Task<List<FormationsEtInscriptionsDto>> GetFormationsWithInscriptionsByFormateurAsync(string formateurId);
     }
 }

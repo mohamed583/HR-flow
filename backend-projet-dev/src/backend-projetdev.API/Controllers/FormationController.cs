@@ -59,5 +59,13 @@ namespace backend_projetdev.API.Controllers
             var result = await _mediator.Send(new DeleteFormationCommand{ Id = id });
             return result.Success ? NoContent() : NotFound(result);
         }
+
+        // 6. GET: /formation/
+        [HttpGet]
+        public async Task<IActionResult> GetFormations()
+        {
+            var result = await _mediator.Send(new GetFormationsQuery());
+            return result.Success ? Ok(result) : NotFound(result);
+        }
     }
 }

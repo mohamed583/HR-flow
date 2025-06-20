@@ -45,3 +45,15 @@ C:\Users\mouha\Downloads\projeDev\backend-projet-dev\src\backend-projetdev.Domai
 C:\Users\mouha\Downloads\projeDev\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\refint\backend-projetdev.Domain.dll
 C:\Users\mouha\Downloads\projeDev\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\backend-projetdev.Domain.pdb
 C:\Users\mouha\Downloads\projeDev\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\ref\backend-projetdev.Domain.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\bin\Debug\net9.0\backend-projetdev.Domain.deps.json
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\bin\Debug\net9.0\backend-projetdev.Domain.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\bin\Debug\net9.0\backend-projetdev.Domain.pdb
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\backend-projetdev.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\backend-projetdev.Domain.AssemblyInfoInputs.cache
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\backend-projetdev.Domain.AssemblyInfo.cs
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\backend-projetdev.Domain.csproj.CoreCompileInputs.cache
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\backend-projetdev.Domain.sourcelink.json
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\backend-projetdev.Domain.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\refint\backend-projetdev.Domain.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\backend-projetdev.Domain.pdb
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.Domain\obj\Debug\net9.0\ref\backend-projetdev.Domain.dll

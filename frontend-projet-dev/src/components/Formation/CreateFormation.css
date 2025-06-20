@@ -1,0 +1,33 @@
+.create-formation-container {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  color: #333;
+}
+
+.form-title {
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.formation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.submit-button {
+  background-color: #a7c7e7;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: #8db8dd;
+}

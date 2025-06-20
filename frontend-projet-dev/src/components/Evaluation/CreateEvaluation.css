@@ -1,0 +1,44 @@
+/* CreateEvaluation.css */
+
+.create-evaluation-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.create-evaluation-card {
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-item {
+  width: 100%;
+}
+
+.submit-button {
+  background-color: #b2e2b8 !important; /* Vert pastel */
+  color: #333;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #97d3a7 !important;
+}

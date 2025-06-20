@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UWBjPCnip9s=",
+  "dgSpecHash": "inMogIksau0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj",
+  "projectFilePath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mouha\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
     "C:\\Users\\mouha\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",

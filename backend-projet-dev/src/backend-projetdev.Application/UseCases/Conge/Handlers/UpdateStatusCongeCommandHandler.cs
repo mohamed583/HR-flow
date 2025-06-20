@@ -39,7 +39,7 @@ namespace backend_projetdev.Application.UseCases.Conge.Handlers
                 return Result.Failure("Employé non trouvé.");
 
             var isAdmin = await _currentUserService.IsInRoleAsync("Admin");
-            var isManager = await _currentUserService.IsInRoleAsync("Manager") && conge.Employe.EquipeId == employe.EquipeId;
+            var isManager = await _currentUserService.IsInRoleAsync("Manager");
 
             if (!isAdmin && !isManager)
                 return Result.Failure("Accès refusé.");

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj": {}
+    "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj": {
+    "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj",
+        "projectUniqueName": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj",
         "projectName": "backend-projetdev.Application",
-        "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj",
+        "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj",
         "packagesPath": "C:\\Users\\mouha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Application\\obj\\",
+        "outputPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {
-                "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj"
+              "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {
+                "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj"
               }
             }
           }
@@ -99,14 +99,14 @@
         }
       }
     },
-    "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {
+    "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj",
         "projectName": "backend-projetdev.Domain",
-        "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj",
+        "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj",
         "packagesPath": "C:\\Users\\mouha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\obj\\",
+        "outputPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -164,14 +164,14 @@
         }
       }
     },
-    "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj": {
+    "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj",
         "projectName": "backend-projetdev.Infrastructure",
-        "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\backend-projetdev.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\mouha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -192,11 +192,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj": {
-                "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj"
+              "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj": {
+                "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Application\\backend-projetdev.Application.csproj"
               },
-              "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {
-                "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj"
+              "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj": {
+                "projectPath": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.Domain\\backend-projetdev.Domain.csproj"
               }
             }
           }

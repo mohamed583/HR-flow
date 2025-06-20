@@ -77,7 +77,7 @@ namespace backend_projetdev.API.Controllers
 
         // 7. Approuver ou rejeter
         [HttpPut("approuver/{id}")]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Employe")]
         public async Task<IActionResult> Approuver(int id, [FromQuery] bool approuve)
         {
             var result = await _mediator.Send(new ApprouverEvaluationCommand { EvaluationId = id, Approuve = approuve });

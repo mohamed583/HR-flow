@@ -17,7 +17,13 @@ public class EmployeController : ControllerBase
     {
         _mediator = mediator;
     }
-
+    [HttpGet]
+    [Authorize(Roles = "Employe")]
+    public async Task<IActionResult> GetEmployes()
+    {
+        var result = await _mediator.Send(new GetEmployesQuery());
+        return result.Success ? Ok(result.Data) : NotFound(result.Message);
+    }
     [HttpGet("equipe/{equipeId}")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetByEquipe(int equipeId)

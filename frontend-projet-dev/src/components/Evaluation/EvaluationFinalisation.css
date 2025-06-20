@@ -1,0 +1,17 @@
+.finalisation-container {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.finalisation-card {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.finalisation-title {
+  color: #333;
+  margin-bottom: 1rem;
+}

@@ -21,7 +21,7 @@ namespace backend_projetdev.Application.UseCases.Inscription.Handlers
 
         public async Task<Result> Handle(SupprimerInscriptionCommand request, CancellationToken cancellationToken)
         {
-            return await _repo.SupprimerInscriptionAsync(request.InscriptionId, request.EmployeId);
+            return await _repo.SupprimerInscriptionAsync(request.InscriptionId);
         }
     }
 }

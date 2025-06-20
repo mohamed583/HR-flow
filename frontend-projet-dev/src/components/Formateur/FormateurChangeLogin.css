@@ -1,0 +1,30 @@
+.change-login-container {
+  padding: 2rem;
+  background: var(--background-color);
+  min-height: 100vh;
+}
+.change-login-paper {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 16px;
+}
+.form-title {
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.access-denied {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+}
+.access-denied img {
+  width: 150px;
+  margin-bottom: 1rem;
+}

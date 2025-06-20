@@ -8,7 +8,7 @@ namespace backend_projetdev.API.Controllers
 {
     [ApiController]
     [Route("formateur")]
-    [Authorize(Roles = "Admin")]
+    
     public class FormateurController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -20,6 +20,7 @@ namespace backend_projetdev.API.Controllers
 
         // 1. Créer un formateur
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> CreateFormateur([FromBody] CreateFormateurCommand command)
         {
             var result = await _mediator.Send(command);
@@ -31,6 +32,7 @@ namespace backend_projetdev.API.Controllers
 
         // 2. Lister tous les formateurs
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetFormateurs()
         {
             var result = await _mediator.Send(new GetAllFormateursQuery());
@@ -42,6 +44,7 @@ namespace backend_projetdev.API.Controllers
 
         // 3. Afficher un formateur spécifique
         [HttpGet("{id}")]
+        [Authorize(Roles = "Employe")]
         public async Task<IActionResult> GetFormateur(string id)
         {
             var result = await _mediator.Send(new GetFormateurByIdQuery { Id = id });
@@ -53,6 +56,7 @@ namespace backend_projetdev.API.Controllers
 
         // 4. Modifier un formateur
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> EditFormateur(string id, [FromBody] EditFormateurCommand command)
         {
             if (id != command.Formateur.Id)
@@ -67,6 +71,7 @@ namespace backend_projetdev.API.Controllers
 
         // 5. Supprimer un formateur
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteFormateur(string id)
         {
             var result = await _mediator.Send(new DeleteFormateurCommand { Id = id });

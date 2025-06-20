@@ -24,7 +24,7 @@ namespace backend_projetdev.Application.UseCases.Conge.Handlers
         {
             var conge = await _congeRepository.GetByIdAsync(request.Id);
 
-            if (conge == null || conge.StatusConge != Status.EnCours)
+            if (conge == null)
                 return Result.Failure("Congé introuvable ou ne peut pas être supprimé.");
 
             await _congeRepository.DeleteAsync(conge);

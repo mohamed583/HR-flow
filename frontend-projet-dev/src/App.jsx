@@ -24,6 +24,21 @@ import EquipeCreatePage from "./pages/Equipe/EquipeCreatePage";
 import EquipeDetailsPage from "./pages/Equipe/EquipeDetailsPage";
 import EditEquipePage from "./pages/Equipe/EditEquipePage";
 import FormateursListPage from "./pages/Formateur/FormateursListPage";
+import CreateFormateurPage from "./pages/Formateur/CreateFormateurPage";
+import FormateurDetailsPage from "./pages/Formateur/FormateurDetailsPage";
+import FormateurEditPage from "./pages/Formateur/FormateurEditPage";
+import FormateurChangeLoginPage from "./pages/Formateur/FormateurChangeLoginPage";
+import FormationsListPage from "./pages/Formation/FormationsListPage";
+import FormationDetailsPage from "./pages/Formation/FormationDetailsPage";
+import CreateFormationPage from "./pages/Formation/CreateFormationPage";
+import MesInscriptionsPage from "./pages/Inscription/MesInscriptionsPage";
+import FormationEditPage from "./pages/Formation/FormationEditPage";
+import CongeCreatePage from "./pages/Conge/CongeCreatePage";
+import ListeCongesPage from "./pages/Conge/ListeCongesPage";
+import EvaluationListPage from "./pages/Evaluation/EvaluationListPage";
+import CreateEvaluationPage from "./pages/Evaluation/CreateEvaluationPage";
+import EvaluationDetailsPage from "./pages/Evaluation/EvaluationDetailsPage";
+import EvaluationFinalisationPage from "./pages/Evaluation/EvaluationFinalisationPage";
 
 export default function App() {
   return (
@@ -83,6 +98,48 @@ export default function App() {
               <Route path="/equipe/:id" element={<EquipeDetailsPage />} />
               <Route path="/equipe/:id/edit" element={<EditEquipePage />} />
               <Route path="/formateurs" element={<FormateursListPage />} />
+              <Route
+                path="/formateur/create"
+                element={<CreateFormateurPage />}
+              />
+              <Route path="/formateur/:id" element={<FormateurDetailsPage />} />
+              <Route
+                path="/formateur/:id/edit"
+                element={<FormateurEditPage />}
+              />
+              <Route
+                path="/formateur/:id/change-login"
+                element={<FormateurChangeLoginPage />}
+              />
+              <Route path="/formations" element={<FormationsListPage />} />
+              <Route
+                path="/formation/create"
+                element={<CreateFormationPage />}
+              />
+              <Route path="/formation/:id" element={<FormationDetailsPage />} />
+              <Route
+                path="/mes-inscriptions"
+                element={<MesInscriptionsPage />}
+              />
+              <Route
+                path="/formation/:id/edit"
+                element={<FormationEditPage />}
+              />
+              <Route path="/conge/create" element={<CongeCreatePage />} />
+              <Route path="/conges" element={<ListeCongesPage />} />
+              <Route path="/evaluations" element={<EvaluationListPage />} />
+              <Route
+                path="/evaluation/create"
+                element={<CreateEvaluationPage />}
+              />
+              <Route
+                path="/evaluation/:id"
+                element={<EvaluationDetailsPage />}
+              />
+              <Route
+                path="/evaluation/:id/finalize"
+                element={<EvaluationFinalisationPage />}
+              />
             </Route>
           </Routes>
         </Router>

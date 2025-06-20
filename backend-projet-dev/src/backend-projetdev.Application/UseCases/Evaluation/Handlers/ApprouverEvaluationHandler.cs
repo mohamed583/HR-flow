@@ -31,8 +31,14 @@ namespace backend_projetdev.Application.UseCases.Evaluation.Handlers
             var userId = await _currentUserService.GetUserIdAsync();
             if (evaluation.EmployeId != userId)
                 return Result.Failure("Non autorisé.");
-
-            evaluation.EstApprouve = EstApprouve.Oui;
+            if (request.Approuve)
+            {
+                evaluation.EstApprouve = EstApprouve.Oui;
+            }
+            else
+            {
+                evaluation.EstApprouve = EstApprouve.Non;
+            }
             await _repository.UpdateAsync(evaluation);
 
             return Result.SuccessResult();

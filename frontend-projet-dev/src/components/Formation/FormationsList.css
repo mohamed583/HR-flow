@@ -1,0 +1,63 @@
+.formation-list-container {
+  padding: 2rem;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.title {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.select-formateur {
+  margin-bottom: 2rem;
+}
+
+.formation-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.formation-card {
+  background-color: #e5e5e5;
+  border: 1px solid #d5c6e0;
+  border-radius: 16px;
+  padding: 1rem;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.formation-card:hover {
+  transform: translateY(-4px);
+}
+.create-button {
+  background-color: #a7c7e7;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create-button:hover {
+  background-color: #8db8dd;
+}
+.details-button {
+  background-color: #b2e2b8;
+  color: #333;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.details-button:hover {
+  background-color: #95d3a1;
+}

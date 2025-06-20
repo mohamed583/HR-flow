@@ -1,0 +1,37 @@
+.evaluation-detail-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.evaluation-card {
+  padding: 24px;
+  background-color: #fefefe;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+}
+
+.evaluation-title {
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.access-denied-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.access-denied-message {
+  color: #e74c3c;
+  margin-top: 12px;
+}
+
+.decision-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}

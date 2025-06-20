@@ -1,0 +1,87 @@
+.evaluation-container {
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+
+.evaluation-title {
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.evaluation-card {
+  background-color: #fff;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.evaluation-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.evaluation-header-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-blue {
+  background-color: #a7c7e7;
+  color: #333;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-blue:hover {
+  background-color: #8fb3d7;
+}
+
+.btn-green {
+  background-color: #b2e2b8;
+  color: #333;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-green:hover {
+  background-color: #9fd6a8;
+}
+
+.btn-pink {
+  background-color: #f6c6d4;
+  color: #333;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-pink:hover {
+  background-color: #f3b4c4;
+}
+
+.btn-yellow {
+  background-color: #fff1b0;
+  color: #333;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-yellow:hover {
+  background-color: #ffe88a;
+}
+
+.btn-purple {
+  background-color: #d5c6e0;
+  color: #333;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-purple:hover {
+  background-color: #c7b5d6;
+}

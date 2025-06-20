@@ -43,3 +43,18 @@ export async function getMe() {
     throw error; // ou gérer l'erreur autrement
   }
 }
+export async function changeLoginInfo(id, loginInfo) {
+  try {
+    const response = await apiClient.put(`/auth/ChangeLoginInfo`, {
+      id,
+      data: loginInfo,
+    });
+    return response.data;
+  } catch (error) {
+    console.error(
+      "Erreur lors du changement des identifiants de l'utilisateur :",
+      error
+    );
+    throw error;
+  }
+}

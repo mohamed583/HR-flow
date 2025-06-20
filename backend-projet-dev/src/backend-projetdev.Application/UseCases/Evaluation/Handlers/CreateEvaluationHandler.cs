@@ -53,7 +53,7 @@ namespace backend_projetdev.Application.UseCases.Evaluation.Handlers
                 FinaliseParEmploye = false,
                 FinaliseParManager = false,
                 EstApprouve = EstApprouve.EnCours,
-                DateEvaluation = DateTime.Now
+                DateEvaluation = request.DateEvaluation
             };
 
             await _repository.AddAsync(evaluation);

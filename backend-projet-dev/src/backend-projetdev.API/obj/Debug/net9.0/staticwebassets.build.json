@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "a+Cycaz8tl5IiUvOf8bfgtNDlqzrkj6KkWpnSBRnwoA=",
+  "Hash": "HK3PbnKAx4hqdIlGtQg1wlmqQ4HDQIwLus4qopQF6u0=",
   "Source": "backend-projetdev.API",
   "BasePath": "_content/backend-projetdev.API",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "backend-projetdev.API\\wwwroot",
       "Source": "backend-projetdev.API",
-      "ContentRoot": "C:\\Users\\mouha\\Downloads\\projeDev\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\",
       "BasePath": "_content/backend-projetdev.API",
       "Pattern": "**"
     }
