@@ -30,6 +30,7 @@ builder.Services.AddCors(options =>
         });
 });
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddHttpClient();
 // 1. Add layered services
 builder.Services.AddApplicationServices(); // Application layer (MediatR, AutoMapper, FluentValidation)
 builder.Services.AddInfrastructure(builder.Configuration); // Infrastructure (EF, Identity, Repos, JWT)

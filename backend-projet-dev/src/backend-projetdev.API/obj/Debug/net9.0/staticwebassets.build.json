@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HK3PbnKAx4hqdIlGtQg1wlmqQ4HDQIwLus4qopQF6u0=",
+  "Hash": "vjoLNoddRkEckDn4nEGUWa+dLupHwGoXxDo18aB9JCM=",
   "Source": "backend-projetdev.API",
   "BasePath": "_content/backend-projetdev.API",
   "Mode": "Default",
@@ -15,6 +15,317 @@
       "Pattern": "**"
     }
   ],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\cvs\\9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf",
+      "SourceId": "backend-projetdev.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\",
+      "BasePath": "_content/backend-projetdev.API",
+      "RelativePath": "cvs/9a2c9fd7-95c1-494a-8494-fdba5339b2ba#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rydt405zu0",
+      "Integrity": "DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cvs\\9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\cvs\\d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf",
+      "SourceId": "backend-projetdev.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\",
+      "BasePath": "_content/backend-projetdev.API",
+      "RelativePath": "cvs/d8f73d29-2b55-4aaf-b825-cec085a983d3#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "336858i4dw",
+      "Integrity": "McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cvs\\d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\cvs\\fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf",
+      "SourceId": "backend-projetdev.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\",
+      "BasePath": "_content/backend-projetdev.API",
+      "RelativePath": "cvs/fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d#[.{fingerprint}]?.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "axucdg8uh3",
+      "Integrity": "cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cvs\\fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "cvs/9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf",
+      "AssetFile": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\cvs\\9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "80009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 12:06:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M="
+        }
+      ]
+    },
+    {
+      "Route": "cvs/9a2c9fd7-95c1-494a-8494-fdba5339b2ba.rydt405zu0.pdf",
+      "AssetFile": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\cvs\\9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "80009"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 12:06:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rydt405zu0"
+        },
+        {
+          "Name": "label",
+          "Value": "cvs/9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M="
+        }
+      ]
+    },
+    {
+      "Route": "cvs/d8f73d29-2b55-4aaf-b825-cec085a983d3.336858i4dw.pdf",
+      "AssetFile": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\cvs\\d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "83195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 12:06:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "336858i4dw"
+        },
+        {
+          "Name": "label",
+          "Value": "cvs/d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4="
+        }
+      ]
+    },
+    {
+      "Route": "cvs/d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf",
+      "AssetFile": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\cvs\\d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "83195"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 12:06:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4="
+        }
+      ]
+    },
+    {
+      "Route": "cvs/fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.axucdg8uh3.pdf",
+      "AssetFile": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\cvs\\fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81062"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 12:06:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "axucdg8uh3"
+        },
+        {
+          "Name": "label",
+          "Value": "cvs/fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak="
+        }
+      ]
+    },
+    {
+      "Route": "cvs/fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf",
+      "AssetFile": "C:\\Users\\mouha\\Downloads\\projeDev\\HR-flow\\backend-projet-dev\\src\\backend-projetdev.API\\wwwroot\\cvs\\fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "81062"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/pdf"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 23 Jun 2025 12:06:24 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak="
+        }
+      ]
+    }
+  ]
 }

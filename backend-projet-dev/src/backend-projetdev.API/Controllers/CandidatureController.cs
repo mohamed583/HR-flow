@@ -77,9 +77,16 @@ namespace backend_projetdev.API.Controllers
         [HttpPost("transformation-employe")]
         public async Task<IActionResult> TransformationEmploye([FromBody] TransformationEmployeDto model)
         {
-            
+
             var result = await _mediator.Send(new TransformationEmployeCommand { Data = model });
             return result.Success ? Ok(result.Message) : BadRequest(result.Message);
+        }
+        [Authorize(Roles = "Employe")]
+        [HttpGet("match/{posteId}")]
+        public async Task<IActionResult> Get(int posteId)
+        {
+            var result = await _mediator.Send(new GetCvMatchByPosteIdQuery { PosteId = posteId });
+            return Ok(result);
         }
     }
 }

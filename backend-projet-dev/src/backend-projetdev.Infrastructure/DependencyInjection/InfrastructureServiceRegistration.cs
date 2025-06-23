@@ -45,6 +45,7 @@ namespace backend_projetdev.Infrastructure.DependencyInjection
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<ILoginService, LoginService>();
             services.AddScoped<IPersonneService, PersonneService>();
+            services.AddScoped<ICvMatchingService, CvMatchingService>();
 
             // Identity + HttpContext
             services.AddScoped<ICurrentUserService, CurrentUserService>();

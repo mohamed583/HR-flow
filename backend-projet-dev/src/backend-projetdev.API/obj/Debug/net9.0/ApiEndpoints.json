@@ -354,6 +354,16 @@
   },
   {
     "ContainingType": "backend_projetdev.API.Controllers.EmployeController",
+    "Method": "GetEmployes",
+    "RelativePath": "employe",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EmployeController",
     "Method": "Delete",
     "RelativePath": "employe/{id}",
     "HttpMethod": "DELETE",
@@ -441,6 +451,16 @@
     "ContainingType": "backend_projetdev.API.Controllers.EmployeController",
     "Method": "ListeEquipe",
     "RelativePath": "employe/liste-equipe",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.EntretienController",
+    "Method": "GetEntretiens",
+    "RelativePath": "entretien",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -859,6 +879,16 @@
   },
   {
     "ContainingType": "backend_projetdev.API.Controllers.FormationController",
+    "Method": "GetFormations",
+    "RelativePath": "formation",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.FormationController",
     "Method": "GetFormation",
     "RelativePath": "formation/{id}",
     "HttpMethod": "GET",
@@ -924,6 +954,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.InscriptionController",
+    "Method": "GetInscriptions",
+    "RelativePath": "inscription",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -1070,6 +1110,22 @@
     "Parameters": [
       {
         "Name": "formationId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend_projetdev.API.Controllers.CandidatureController",
+    "Method": "Get",
+    "RelativePath": "match/{posteId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "posteId",
         "Type": "System.Int32",
         "IsRequired": true
       }

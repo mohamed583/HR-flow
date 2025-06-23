@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { getCandidaturesByPoste } from "../../api/poste";
 import CandidatureList from "../../components/Poste/CandidatureList";
 import { getMe } from "../../api/auth"; // On importe la fonction getMe
+import { getCvMatchByPosteId } from "../../api/candidature";
 
 const PosteCandidaturesPage = () => {
   const { posteId } = useParams();
@@ -11,6 +12,7 @@ const PosteCandidaturesPage = () => {
   const [error, setError] = useState("");
   const [userRole, setUserRole] = useState(null);
   const navigate = useNavigate();
+  const [matchScores, setMatchScores] = useState({});
 
   useEffect(() => {
     const fetchUserRole = async () => {
@@ -34,6 +36,19 @@ const PosteCandidaturesPage = () => {
         const result = await getCandidaturesByPoste(posteId);
         if (result.success) {
           setCandidatures(result.data);
+          // ✅ Fetch matching scores
+          if (result.data.length > 0) {
+            const matchResult = await getCvMatchByPosteId(posteId);
+            if (matchResult.success) {
+              const map = {};
+              matchResult.data.forEach((m) => {
+                map[m.candidatureId] = m.matchingScore;
+              });
+              setMatchScores(map);
+            } else {
+              setError("Erreur lors du chargement des scores.");
+            }
+          }
         } else {
           setError("Erreur lors du chargement des candidatures.");
         }
@@ -63,7 +78,10 @@ const PosteCandidaturesPage = () => {
       ) : error ? (
         <p style={{ color: "#F6C6D4" }}>{error}</p> // Rose pastel pour les erreurs
       ) : (
-        <CandidatureList candidatures={candidatures} />
+        <CandidatureList
+          candidatures={candidatures}
+          matchScores={matchScores}
+        />
       )}
     </div>
   );

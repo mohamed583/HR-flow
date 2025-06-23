@@ -345,6 +345,29 @@
         }
       }
     },
+    "/match/{posteId}": {
+      "get": {
+        "tags": [
+          "Candidature"
+        ],
+        "parameters": [
+          {
+            "name": "posteId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/conge": {
       "post": {
         "tags": [
@@ -588,6 +611,18 @@
         }
       }
     },
+    "/employe": {
+      "get": {
+        "tags": [
+          "Employe"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/employe/equipe/{equipeId}": {
       "get": {
         "tags": [
@@ -740,6 +775,16 @@
       }
     },
     "/entretien": {
+      "get": {
+        "tags": [
+          "Entretien"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "post": {
         "tags": [
           "Entretien"
@@ -1497,6 +1542,28 @@
             "description": "OK"
           }
         }
+      },
+      "get": {
+        "tags": [
+          "Formation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/inscription": {
+      "get": {
+        "tags": [
+          "Inscription"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/inscription/formation/{formationId}": {
@@ -2144,6 +2211,14 @@
           },
           "statut": {
             "$ref": "#/components/schemas/backend_projetdev.Domain.Enums.StatutEmploi"
+          },
+          "adresse": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateNaissance": {
+            "type": "string",
+            "format": "date-time"
           },
           "equipeId": {
             "type": "integer",

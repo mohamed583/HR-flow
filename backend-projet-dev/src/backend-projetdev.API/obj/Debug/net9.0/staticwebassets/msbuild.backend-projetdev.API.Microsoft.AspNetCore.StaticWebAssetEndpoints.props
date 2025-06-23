@@ -1,0 +1,40 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/backend-projetdev.API/cvs/9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"80009"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 12:06:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/backend-projetdev.API/cvs/9a2c9fd7-95c1-494a-8494-fdba5339b2ba.rydt405zu0.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rydt405zu0"},{"Name":"integrity","Value":"sha256-DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M="},{"Name":"label","Value":"_content/backend-projetdev.API/cvs/9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"80009"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 12:06:20 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/backend-projetdev.API/cvs/d8f73d29-2b55-4aaf-b825-cec085a983d3.336858i4dw.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"336858i4dw"},{"Name":"integrity","Value":"sha256-McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4="},{"Name":"label","Value":"_content/backend-projetdev.API/cvs/d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"83195"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 12:06:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/backend-projetdev.API/cvs/d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"83195"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 12:06:35 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/backend-projetdev.API/cvs/fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.axucdg8uh3.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"axucdg8uh3"},{"Name":"integrity","Value":"sha256-cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak="},{"Name":"label","Value":"_content/backend-projetdev.API/cvs/fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"81062"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 12:06:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/backend-projetdev.API/cvs/fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"81062"},{"Name":"Content-Type","Value":"application/pdf"},{"Name":"ETag","Value":"\u0022cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak=\u0022"},{"Name":"Last-Modified","Value":"Mon, 23 Jun 2025 12:06:24 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,58 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>backend-projetdev.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/backend-projetdev.API</BasePath>
+      <RelativePath>cvs/9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>rydt405zu0</Fingerprint>
+      <Integrity>DYAIjFdDKEK7WpQleHB619bQ7XMKyp1DveettLGRE8M=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\9a2c9fd7-95c1-494a-8494-fdba5339b2ba.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>backend-projetdev.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/backend-projetdev.API</BasePath>
+      <RelativePath>cvs/d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>336858i4dw</Fingerprint>
+      <Integrity>McrfS4IKSPuoYhBbEStk5My2HjmOg5w6a040GwlZHZ4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\d8f73d29-2b55-4aaf-b825-cec085a983d3.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf'))">
+      <SourceType>Package</SourceType>
+      <SourceId>backend-projetdev.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/backend-projetdev.API</BasePath>
+      <RelativePath>cvs/fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>axucdg8uh3</Fingerprint>
+      <Integrity>cmuOfa2YPk7r2E3WgzwIL5J7abTyKHpa9SdTFg7q8ak=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\cvs\fb394ef6-cae8-4ec9-a30d-db2a4c16ba7d.pdf'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

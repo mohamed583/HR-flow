@@ -932,3 +932,16 @@ C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetd
 C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\obj\Debug\net9.0\backend-projetdev.API.genruntimeconfig.cache
 C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\obj\Debug\net9.0\ref\backend-projetdev.API.dll
 C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.barcodes.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.bouncy-castle-connector.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.forms.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.io.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.kernel.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.layout.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.pdfa.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.pdfua.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.sign.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.styledxmlparser.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.svg.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\itext.commons.dll
+C:\Users\mouha\Downloads\projeDev\HR-flow\backend-projet-dev\src\backend-projetdev.API\bin\Debug\net9.0\Microsoft.DotNet.PlatformAbstractions.dll

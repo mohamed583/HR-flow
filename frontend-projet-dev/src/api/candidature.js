@@ -64,3 +64,12 @@ export const transformCandidatEnEmploye = async (data) => {
     throw error;
   }
 };
+export const getCvMatchByPosteId = async (posteId) => {
+  try {
+    const response = await apiClient.get(`/match/${posteId}`);
+    return response.data;
+  } catch (err) {
+    console.error("Erreur lors du fetch des scores AI:", err);
+    throw err;
+  }
+};

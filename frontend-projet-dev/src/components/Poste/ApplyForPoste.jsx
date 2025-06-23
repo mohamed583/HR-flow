@@ -1,8 +1,8 @@
-// src/components/Poste/ApplyForPoste.jsx
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { applyForPoste } from "../../api/poste";
-import "./ApplyForPoste.css"; // Style minimaliste et professionnel
+import "./ApplyForPoste.css";
 import { toast } from "react-toastify";
 
 const ApplyForPoste = () => {
@@ -13,13 +13,20 @@ const ApplyForPoste = () => {
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
-    setCvFile(e.target.files[0]);
+    const file = e.target.files[0];
+    if (file && file.type !== "application/pdf") {
+      setError("Seuls les fichiers PDF sont autorisés.");
+      setCvFile(null);
+    } else {
+      setError(null);
+      setCvFile(file);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!cvFile) {
-      setError("Veuillez télécharger votre CV.");
+      setError("Veuillez télécharger votre CV au format PDF.");
       return;
     }
 
@@ -27,9 +34,7 @@ const ApplyForPoste = () => {
       await applyForPoste(id, cvFile);
       setSuccess(true);
       toast.success("Candidature prise en compte");
-      // Redirige vers la page des candidatures de l'utilisateur
       navigate("/candidatures");
-      // eslint-disable-next-line no-unused-vars
     } catch (error) {
       toast.error("Erreur lors de la candidature");
     }
@@ -44,11 +49,12 @@ const ApplyForPoste = () => {
       )}
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="cvFile">Télécharger votre CV</label>
+          <label htmlFor="cvFile">Télécharger votre CV (PDF uniquement)</label>
           <input
             type="file"
             id="cvFile"
             name="cvFile"
+            accept=".pdf"
             onChange={handleFileChange}
             required
           />
