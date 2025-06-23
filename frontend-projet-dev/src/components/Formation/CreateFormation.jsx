@@ -60,7 +60,7 @@ const CreateFormation = () => {
     try {
       const created = await createFormation(formData);
       toast.success("Formation créée avec succès !");
-      navigate(`/formations/${created.id}`);
+      navigate(`/formation/${created.id}`);
     } catch {
       toast.error("Erreur lors de la création.");
     }

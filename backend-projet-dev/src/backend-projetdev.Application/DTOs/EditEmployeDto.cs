@@ -17,6 +17,8 @@ namespace backend_projetdev.Application.DTOs
         public DateTime DateEmbauche { get; set; }
         public StatutContractuel Contrat { get; set; }
         public StatutEmploi Statut { get; set; }
+        public string Adresse { get; set; }
+        public DateTime DateNaissance { get; set; }
         public int? EquipeId { get; set; }
         public bool EstManager { get; set; }
     }

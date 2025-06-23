@@ -12,7 +12,7 @@ namespace backend_projetdev.Application.DTOs
         public DateTime DateEntretien { get; set; }
         public string Status { get; set; } = string.Empty;
         public string Commentaire { get; set; } = string.Empty;
-
+        public string NewEmployeId { get; set; } = string.Empty;
         public CandidatureDto? Candidature { get; set; }
         public EmployeDto? Employe { get; set; }
     }

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import {
   Box,
@@ -12,6 +13,7 @@ import {
   Tooltip,
   Collapse,
 } from "@mui/material";
+import { motion } from "framer-motion";
 import { Outlet, useNavigate } from "react-router-dom";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -19,7 +21,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import logo from "../assets/logo.png";
-import { getMe } from "../api/auth"; // Chemin d’accès correct
+import iconAccueil from "../assets/accueil.png";
+import iconJob from "../assets/job.png";
+import iconTraining from "../assets/training.png";
+import iconCandidature from "../assets/candidature.png";
+import iconInscription from "../assets/inscription.png";
+import iconConge from "../assets/conge.png";
+import iconEvaluation from "../assets/evaluation.png";
+import iconPaies from "../assets/paies.png";
+import iconEntretien from "../assets/entretien.png";
+import iconCollegue from "../assets/addressbook.png";
+import iconOrganisation from "../assets/organisation.png";
+import { getMe, logout } from "../api/auth"; // Chemin d’accès correct
 
 const drawerWidth = 240;
 
@@ -44,8 +57,20 @@ const SidebarLayout = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const handleLogout = () => {
-    console.log("Logout");
+  const handleLogout = async () => {
+    try {
+      const refreshToken = localStorage.getItem("refreshToken");
+      await logout(refreshToken);
+
+      // Nettoyage
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("refreshToken");
+
+      // Redirection
+      navigate("/auth");
+    } catch (error) {
+      console.error("Erreur lors de la déconnexion :", error);
+    }
   };
 
   const handleProfile = () => {
@@ -61,11 +86,7 @@ const SidebarLayout = () => {
       text: "Acceuil",
       path: "/",
       icon: (
-        <img
-          src={"src/assets/accueil.png"}
-          alt="Home"
-          style={{ width: 24, height: 24 }}
-        />
+        <img src={iconAccueil} alt="Home" style={{ width: 24, height: 24 }} />
       ),
     },
     ...(isCandidat || isAdmin
@@ -74,11 +95,7 @@ const SidebarLayout = () => {
             text: "Postes",
             path: "/Postes",
             icon: (
-              <img
-                src={"src/assets/job.png"}
-                alt="Job"
-                style={{ width: 24, height: 24 }}
-              />
+              <img src={iconJob} alt="Job" style={{ width: 24, height: 24 }} />
             ),
           },
         ]
@@ -90,8 +107,23 @@ const SidebarLayout = () => {
             path: "/formations",
             icon: (
               <img
-                src={"src/assets/training.png"}
+                src={iconTraining}
                 alt="Formation"
+                style={{ width: 24, height: 24 }}
+              />
+            ),
+          },
+        ]
+      : []),
+    ...(isCandidat
+      ? [
+          {
+            text: "Candidatures",
+            path: "/candidatures",
+            icon: (
+              <img
+                src={iconCandidature}
+                alt="Candidature"
                 style={{ width: 24, height: 24 }}
               />
             ),
@@ -105,7 +137,7 @@ const SidebarLayout = () => {
             path: "/mes-inscriptions",
             icon: (
               <img
-                src={"src/assets/inscription.png"}
+                src={iconInscription}
                 alt="Inscription"
                 style={{ width: 24, height: 24 }}
               />
@@ -116,7 +148,7 @@ const SidebarLayout = () => {
             path: "/conges",
             icon: (
               <img
-                src={"src/assets/conge.png"}
+                src={iconConge}
                 alt="Conge"
                 style={{ width: 24, height: 24 }}
               />
@@ -127,8 +159,41 @@ const SidebarLayout = () => {
             path: "/evaluations",
             icon: (
               <img
-                src={"src/assets/evaluation.png"}
+                src={iconEvaluation}
                 alt="Evaluation"
+                style={{ width: 24, height: 24 }}
+              />
+            ),
+          },
+          {
+            text: "Paies",
+            path: "/paies",
+            icon: (
+              <img
+                src={iconPaies}
+                alt="Paie"
+                style={{ width: 24, height: 24 }}
+              />
+            ),
+          },
+          {
+            text: "Entretiens",
+            path: "/mes-entretiens",
+            icon: (
+              <img
+                src={iconEntretien}
+                alt="Entretien"
+                style={{ width: 24, height: 24 }}
+              />
+            ),
+          },
+          {
+            text: "Collégues",
+            path: "/mes-collegues",
+            icon: (
+              <img
+                src={iconCollegue}
+                alt="Collegue"
                 style={{ width: 24, height: 24 }}
               />
             ),
@@ -169,36 +234,6 @@ const SidebarLayout = () => {
     <Box sx={{ textAlign: "center" }}>
       <Toolbar />
       <List>
-        {menuItems.map((item) => (
-          <ListItemButton
-            key={item.text}
-            onClick={() => {
-              navigate(item.path);
-              if (window.innerWidth < 600) setMobileOpen(false);
-            }}
-            sx={{
-              borderRadius: 2,
-              my: 0.5,
-              mx: 1,
-              transition: "background-color 0.3s, transform 0.2s",
-              "&:hover": {
-                backgroundColor: pastelColors.secondary,
-                transform: "translateX(4px)",
-              },
-            }}
-          >
-            <ListItemIcon sx={{ color: pastelColors.text }}>
-              {item.icon}
-            </ListItemIcon>
-            <ListItemText
-              primary={item.text}
-              primaryTypographyProps={{
-                fontWeight: 500,
-              }}
-            />
-          </ListItemButton>
-        ))}
-
         {/* Bouton Organisation (visible uniquement pour admin) */}
         {isAdmin && (
           <>
@@ -217,7 +252,7 @@ const SidebarLayout = () => {
             >
               <ListItemIcon>
                 <img
-                  src={"src/assets/organisation.png"}
+                  src={iconOrganisation}
                   alt="Organisation"
                   style={{ width: 24, height: 24 }}
                 />
@@ -260,6 +295,35 @@ const SidebarLayout = () => {
             </Collapse>
           </>
         )}
+        {menuItems.map((item) => (
+          <ListItemButton
+            key={item.text}
+            onClick={() => {
+              navigate(item.path);
+              if (window.innerWidth < 600) setMobileOpen(false);
+            }}
+            sx={{
+              borderRadius: 2,
+              my: 0.5,
+              mx: 1,
+              transition: "background-color 0.3s, transform 0.2s",
+              "&:hover": {
+                backgroundColor: pastelColors.secondary,
+                transform: "translateX(4px)",
+              },
+            }}
+          >
+            <ListItemIcon sx={{ color: pastelColors.text }}>
+              {item.icon}
+            </ListItemIcon>
+            <ListItemText
+              primary={item.text}
+              primaryTypographyProps={{
+                fontWeight: 500,
+              }}
+            />
+          </ListItemButton>
+        ))}
       </List>
     </Box>
   );

@@ -1,0 +1,31 @@
+.entretien-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+}
+
+.entretien-form-card {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.access-denied-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.access-denied-message {
+  color: #d32f2f;
+}

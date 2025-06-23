@@ -1,0 +1,32 @@
+.candidature-detail-container {
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.candidature-card {
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.entretien-card {
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #fff;
+  border-radius: 12px;
+  border-left: 6px solid #a7c7e7;
+}
+
+.details-button {
+  margin-top: 10px;
+  background-color: #b2e2b8;
+  color: #333;
+}

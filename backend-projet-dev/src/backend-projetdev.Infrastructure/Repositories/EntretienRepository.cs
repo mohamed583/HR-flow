@@ -14,6 +14,12 @@ namespace backend_projetdev.Infrastructure.Repositories
         {
             _context = context;
         }
+        public async Task<List<Entretien>> GetAllAsync()
+        {
+            return await _context.Entretiens
+                .AsNoTracking()
+                .ToListAsync();
+        }
 
         public async Task<Entretien?> GetByIdAsync(string id)
         {

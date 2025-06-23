@@ -4,6 +4,7 @@ import { getMe } from "../../api/auth";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "./PosteList.css"; // Fichier CSS pour la personnalisation des styles
+import iconVide from "../../assets/vide.png";
 
 const PosteList = () => {
   const [postes, setPostes] = useState([]);
@@ -68,11 +69,7 @@ const PosteList = () => {
       {postes.length === 0 ? (
         <div className="no-postes-container animated fadeIn">
           <div className="no-postes-icon">
-            <img
-              src={"src/assets/vide.png"}
-              alt="Aucun poste"
-              className="no-postes-img"
-            />
+            <img src={iconVide} alt="Aucun poste" className="no-postes-img" />
           </div>
           <h1 className="no-postes-message">
             Pas de postes ouverts pour le moment

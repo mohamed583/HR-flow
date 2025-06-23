@@ -10,6 +10,7 @@ namespace backend_projetdev.Application.Interfaces
     public interface IEntretienRepository
     {
         Task<Entretien?> GetByIdAsync(string id);
+        Task<List<Entretien>> GetAllAsync();
         Task<List<Entretien>> GetByCandidatureIdAsync(string candidatureId);
         Task<List<Entretien>> GetByEmployeIdAsync(string employeId);
         Task<List<Entretien>> GetNonFinalizedByEmployeIdAsync(string employeId);

@@ -5,9 +5,9 @@ import { getMe, changeLoginInfo } from "../../api/auth";
 import { Box, Typography, TextField, Button, Paper } from "@mui/material";
 import { toast } from "react-toastify";
 import AccessDeniedImage from "../../assets/accessDenied.png";
-import "./FormateurChangeLogin.css";
+import "./ChangeLogin.css";
 
-const FormateurChangeLogin = () => {
+const ChangeLogin = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [loginInfo, setLoginInfo] = useState({ newEmail: "", newPassword: "" });
@@ -89,4 +89,4 @@ const FormateurChangeLogin = () => {
   );
 };
 
-export default FormateurChangeLogin;
+export default ChangeLogin;

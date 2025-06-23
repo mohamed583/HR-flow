@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useContext } from "react";
 import {
   TextField,
@@ -10,6 +11,9 @@ import {
 import { AuthContext } from "../../context/AuthContext";
 import logo from "../../assets/logo.png";
 import { toast } from "react-toastify";
+import { getMe } from "../../api/auth";
+import { getEmployes } from "../../api/employe";
+import { useNavigate } from "react-router-dom";
 
 export default function Login({ toggleForm }) {
   const { login } = useContext(AuthContext);
@@ -18,13 +22,33 @@ export default function Login({ toggleForm }) {
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
       await login({ email, password });
+
+      // ✅ Étape 1 : Récupérer l'utilisateur connecté
+      const user = await getMe();
+
+      // ✅ Étape 2 : Récupérer tous les employés et filtrer par ID
+      if (user.roles.includes("Employe")) {
+        const allEmployes = await getEmployes();
+        const employe = allEmployes.find((e) => e.id === user.id);
+
+        // ✅ Étape 3 : Vérifier s’il est inactif
+        if (employe && employe.statut === "Inactif") {
+          localStorage.removeItem("accessToken");
+          localStorage.removeItem("refreshToken");
+          toast.error("Votre compte est bloqué !");
+          return;
+        }
+      }
       toast.success("Connexion réussie !");
-      // Redirection à gérer ici
+      // ✅ Redirection normale
+      navigate("/");
     } catch (err) {
       setError(err.response?.data?.message || "Erreur de connexion");
       toast.error("Échec de la connexion " + err.response?.data?.message);

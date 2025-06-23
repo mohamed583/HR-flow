@@ -1,5 +1,6 @@
 ﻿using backend_projetdev.Application.Common;
 using backend_projetdev.Application.DTOs;
+using backend_projetdev.Application.UseCases.Evaluation.Queries;
 using backend_projetdev.Application.UseCases.Inscription.Commands;
 using backend_projetdev.Application.UseCases.Inscription.Queries;
 using MediatR;
@@ -17,6 +18,14 @@ namespace backend_projetdev.API.Controllers
         public InscriptionController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> GetInscriptions()
+        {
+            var result = await _mediator.Send(new GetAllInscriptionsQuery());
+            return result.Success ? Ok(result) : StatusCode(403, result);
         }
 
         [HttpGet("formation/{formationId:int}")]

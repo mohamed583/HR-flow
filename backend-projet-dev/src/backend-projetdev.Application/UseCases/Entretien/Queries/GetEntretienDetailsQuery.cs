@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace backend_projetdev.Application.UseCases.Entretien.Queries
 {
-    public class GetEntretienDetailsQuery : IRequest<Result<EntretienDto>>
+    public class GetEntretienDetailsQuery : IRequest<Result<EntretienDetailsDto>>
     {
         public string EntretienId { get; set; }
 

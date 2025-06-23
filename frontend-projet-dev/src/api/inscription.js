@@ -21,6 +21,15 @@ export const getMesInscriptions = async () => {
     throw error;
   }
 };
+export const getAllInscriptions = async () => {
+  try {
+    const response = await apiClient.get("/inscription");
+    return response.data;
+  } catch (error) {
+    console.error("Erreur lors de la récupération des inscriptions:", error);
+    throw error;
+  }
+};
 export const getFormationsEtInscriptions = async () => {
   try {
     const response = await apiClient.get("/inscription/mes-formations");

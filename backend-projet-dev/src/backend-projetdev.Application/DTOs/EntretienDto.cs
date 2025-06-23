@@ -11,6 +11,7 @@ namespace backend_projetdev.Application.DTOs
         public string Id { get; set; } = string.Empty;
         public string CandidatureId { get; set; } = string.Empty;
         public string EmployeId { get; set; } = string.Empty;
+        public string NewEmployeId { get; set; } = string.Empty;
         public DateTime DateEntretien { get; set; }
         public string Status { get; set; } = string.Empty;
     }

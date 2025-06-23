@@ -88,7 +88,7 @@ const FormateurDetails = () => {
         <Box className="formateur-actions">
           <Button
             className="action-button"
-            onClick={() => navigate(`/formateur/${id}/change-login`)}
+            onClick={() => navigate(`/auth/${id}/change-login`)}
           >
             <FiUserCheck size={16} /> Login Infos
           </Button>

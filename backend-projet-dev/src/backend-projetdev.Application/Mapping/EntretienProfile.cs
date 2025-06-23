@@ -20,7 +20,7 @@ namespace backend_projetdev.Application.Mapping
 
             CreateMap<Entretien, EntretienDto>()
     .ForMember(dest => dest.Status, opt => opt.MapFrom(src => src.Status.ToString()));
-
+            CreateMap<Entretien, EntretienDetailsDto>().ReverseMap();
         }
     }
 }

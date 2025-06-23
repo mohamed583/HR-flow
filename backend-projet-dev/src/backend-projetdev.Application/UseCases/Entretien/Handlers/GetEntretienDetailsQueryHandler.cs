@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace backend_projetdev.Application.UseCases.Entretien.Handlers
 {
-    public class GetEntretienDetailsQueryHandler : IRequestHandler<GetEntretienDetailsQuery, Result<EntretienDto>>
+    public class GetEntretienDetailsQueryHandler : IRequestHandler<GetEntretienDetailsQuery, Result<EntretienDetailsDto>>
     {
         private readonly IEntretienRepository _repository;
         private readonly IMapper _mapper;
@@ -23,14 +23,14 @@ namespace backend_projetdev.Application.UseCases.Entretien.Handlers
             _mapper = mapper;
         }
 
-        public async Task<Result<EntretienDto>> Handle(GetEntretienDetailsQuery request, CancellationToken cancellationToken)
+        public async Task<Result<EntretienDetailsDto>> Handle(GetEntretienDetailsQuery request, CancellationToken cancellationToken)
         {
             var entretien = await _repository.GetByIdWithDetailsAsync(request.EntretienId);
             if (entretien == null)
-                return Result<EntretienDto>.Failure("Entretien introuvable.");
+                return Result<EntretienDetailsDto>.Failure("Entretien introuvable.");
 
-            var dto = _mapper.Map<EntretienDto>(entretien);
-            return Result<EntretienDto>.SuccessResult(dto);
+            var dto = _mapper.Map<EntretienDetailsDto>(entretien);
+            return Result<EntretienDetailsDto>.SuccessResult(dto);
         }
     }
 

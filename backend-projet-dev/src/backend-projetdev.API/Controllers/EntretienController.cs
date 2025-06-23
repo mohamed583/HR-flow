@@ -1,4 +1,5 @@
-﻿using backend_projetdev.Application.UseCases.Entretien.Commands;
+﻿using backend_projetdev.Application.UseCases.Employe.Queries;
+using backend_projetdev.Application.UseCases.Entretien.Commands;
 using backend_projetdev.Application.UseCases.Entretien.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -16,6 +17,13 @@ namespace backend_projetdev.API.Controllers
         public EntretienController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetEntretiens()
+        {
+            var result = await _mediator.Send(new GetEntretiensQuery());
+            return result.Success ? Ok(result.Data) : NotFound(result.Message);
         }
 
         [HttpPost]

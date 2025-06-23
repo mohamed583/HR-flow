@@ -123,6 +123,22 @@ namespace backend_projetdev.Infrastructure.Repositories
                 })
                 .ToListAsync();
         }
+        public async Task<List<InscriptionDto>> GetAllAsync()
+        {
+            return await _context.Inscriptions
+                .Include(i => i.Formation)
+                .Include(i => i.Employe)
+                .Select(i => new InscriptionDto
+                {
+                    Id = i.Id,
+                    FormationId = i.FormationId,
+                    Statut = i.StatusInscription.ToString(),
+                    EmployeId = i.EmployeId,
+                    NomEmploye = i.Employe.Nom + " " + i.Employe.Prenom
+                })
+                .ToListAsync();
+        }
+
 
         public async Task<Result> SupprimerInscriptionAsync(int id)
         {

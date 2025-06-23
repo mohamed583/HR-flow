@@ -19,25 +19,85 @@ apiClient.interceptors.request.use((config) => {
   }
   return config;
 });
+let isRefreshing = false;
+let failedQueue = [];
 
-// Ajoute un interceptor pour les réponses
+const processQueue = (error, token = null) => {
+  failedQueue.forEach((prom) => {
+    if (error) {
+      prom.reject(error);
+    } else {
+      prom.resolve(token);
+    }
+  });
+  failedQueue = [];
+};
+
 apiClient.interceptors.response.use(
-  (response) => {
-    // Si tout va bien, retourne la réponse normalement
-    return response;
-  },
-  (error) => {
-    // Si l'erreur est due à un accès non autorisé (401)
-    if (error.response && error.response.status === 401) {
-      console.warn("Non autorisé. Vous allez être redirigé.");
-      // Vérifie si l'utilisateur est déjà sur la page de login
-      if (window.location.pathname !== "/auth") {
-        // Si l'utilisateur n'est pas sur la page de login, on le redirige vers la page de login
+  (response) => response,
+  async (error) => {
+    const originalRequest = error.config;
+
+    if (
+      error.response &&
+      error.response.status === 401 &&
+      !originalRequest._retry
+    ) {
+      originalRequest._retry = true;
+
+      // ✅ Stopper ici si déjà sur /auth
+      if (window.location.pathname === "/auth") {
+        return Promise.reject(error);
+      }
+
+      if (isRefreshing) {
+        return new Promise((resolve, reject) => {
+          failedQueue.push({ resolve, reject });
+        })
+          .then((token) => {
+            originalRequest.headers["Authorization"] = "Bearer " + token;
+            return apiClient(originalRequest);
+          })
+          .catch((err) => Promise.reject(err));
+      }
+
+      isRefreshing = true;
+
+      try {
+        const refreshToken = localStorage.getItem("refreshToken");
+        const response = await axios.post(`${API_URL}/auth/refresh`, {
+          refreshToken,
+        });
+
+        const { accessToken, refreshToken: newRefreshToken } = response.data;
+
+        localStorage.setItem("accessToken", accessToken);
+        localStorage.setItem("refreshToken", newRefreshToken);
+
+        apiClient.defaults.headers.common["Authorization"] =
+          "Bearer " + accessToken;
+
+        processQueue(null, accessToken);
+
+        originalRequest.headers["Authorization"] = "Bearer " + accessToken;
+
+        return apiClient(originalRequest);
+      } catch (err) {
+        processQueue(err, null);
         localStorage.removeItem("accessToken");
         localStorage.removeItem("refreshToken");
-        window.location.href = "/auth"; // Redirige vers la page de login
+
+        // ✅ Rediriger vers /auth uniquement si on n'y est pas déjà
+        if (window.location.pathname !== "/auth") {
+          window.location.href = "/auth";
+        }
+
+        return Promise.reject(err);
+      } finally {
+        isRefreshing = false;
       }
     }
+
     return Promise.reject(error);
   }
 );

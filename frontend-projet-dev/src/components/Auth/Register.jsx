@@ -3,6 +3,7 @@ import { TextField, Button, Box, Typography } from "@mui/material";
 import { AuthContext } from "../../context/AuthContext";
 import logo from "../../assets/logo.png";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function Register({ toggleForm }) {
   const { register } = useContext(AuthContext);
@@ -18,7 +19,7 @@ export default function Register({ toggleForm }) {
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
-
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -29,7 +30,7 @@ export default function Register({ toggleForm }) {
     try {
       await register(form);
       toast.success("Compte créé avec succés!");
-      // Redirection à gérer ici
+      navigate("/");
     } catch (err) {
       setError(err.response?.data?.message || "Erreur lors de l'inscription");
       toast.error("Échec de la connexion " + err.response?.data?.message);

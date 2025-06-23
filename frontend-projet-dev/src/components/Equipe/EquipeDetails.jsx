@@ -49,7 +49,11 @@ const EquipeDetails = () => {
   }, [id]);
 
   const handleDelete = async () => {
-    if (window.confirm("Êtes-vous sûr de vouloir supprimer cette équipe ? Cette action est irréversible.")) {
+    if (
+      window.confirm(
+        "Êtes-vous sûr de vouloir supprimer cette équipe ? Cette action est irréversible."
+      )
+    ) {
       try {
         await deleteEquipe(id);
         toast.success("Équipe supprimée avec succès !");
@@ -72,7 +76,8 @@ const EquipeDetails = () => {
           Accès refusé
         </Typography>
         <Typography className="access-denied-message">
-          Vous n'avez pas les autorisations nécessaires pour consulter cette page.
+          Vous n'avez pas les autorisations nécessaires pour consulter cette
+          page.
         </Typography>
       </Box>
     );
@@ -97,7 +102,10 @@ const EquipeDetails = () => {
         </Typography>
 
         <Box className="equipe-actions">
-          <Button onClick={() => navigate(`/equipe/${id}/edit`)} className="action-button edit">
+          <Button
+            onClick={() => navigate(`/equipe/${id}/edit`)}
+            className="action-button edit"
+          >
             <FiEdit size={16} /> Modifier
           </Button>
           <Button onClick={handleDelete} className="action-button delete">
@@ -106,7 +114,10 @@ const EquipeDetails = () => {
         </Box>
       </Card>
 
-      <Typography variant="h6" sx={{ marginTop: 3, marginBottom: 1, color: pastelColors.text }}>
+      <Typography
+        variant="h6"
+        sx={{ marginTop: 3, marginBottom: 1, color: pastelColors.text }}
+      >
         Employés associés
       </Typography>
       <Divider />
@@ -121,7 +132,6 @@ const EquipeDetails = () => {
                 {employe.prenom} {employe.nom}
               </Typography>
               <Typography>Métier : {employe.metier}</Typography>
-              <Typography>Statut : {employe.statut}</Typography>
               <Button
                 className="details-button"
                 onClick={() => navigate(`/employe/${employe.id}`)}

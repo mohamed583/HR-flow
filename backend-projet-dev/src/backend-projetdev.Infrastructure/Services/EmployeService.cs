@@ -13,15 +13,18 @@ namespace backend_projetdev.Infrastructure.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly IEmployeRepository _employeRepository;
         private readonly ICandidatRepository _candidatRepository;
+        private readonly IEntretienRepository _entretienRepository;
 
         public EmployeService(
             UserManager<ApplicationUser> userManager,
             IEmployeRepository employeRepository,
+            IEntretienRepository entretienRepository,
             ICandidatRepository candidatRepository)
         {
             _userManager = userManager;
             _employeRepository = employeRepository;
             _candidatRepository = candidatRepository;
+            _entretienRepository = entretienRepository;
         }
 
         public async Task<Employe?> GetByIdAsync(string id)
@@ -84,7 +87,17 @@ namespace backend_projetdev.Infrastructure.Services
                 return false;
 
             await _userManager.AddToRoleAsync(appUser, "Employe");
+            if (model.EstManager)
+            {
+                await _userManager.AddToRoleAsync(appUser, "Manager");
+            }
             await _employeRepository.AddAsync(employe);
+            var entretiens = await _entretienRepository.GetByCandidatureIdAsync(model.CandidatureId);
+            foreach (var entretien in entretiens)
+            {
+                entretien.NewEmployeId = employe.Id;
+                await _entretienRepository.UpdateAsync(entretien);
+            }
             return true;
         }
     }

@@ -13,6 +13,7 @@ const PosteDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [isCandidat, setIsCandidat] = useState(false);
   const [status, setStatus] = useState(0);
   const [showModal, setShowModal] = useState(false); // État pour afficher le modal de confirmation
   const navigate = useNavigate();
@@ -43,6 +44,9 @@ const PosteDetails = () => {
         const userData = await getMe();
         if (userData.roles.includes("Admin")) {
           setIsAdmin(true);
+        }
+        if (userData.roles.includes("Candidat")) {
+          setIsCandidat(true);
         }
       } catch (err) {
         console.error(
@@ -137,13 +141,14 @@ const PosteDetails = () => {
               </div>
             </div>
           )}
-
-          <button
-            className="btn btn-success"
-            onClick={() => navigate(`/poste/${poste.id}/apply`)}
-          >
-            Postuler
-          </button>
+          {isCandidat && (
+            <button
+              className="btn btn-success"
+              onClick={() => navigate(`/poste/${poste.id}/apply`)}
+            >
+              Postuler
+            </button>
+          )}
         </div>
       )}
 

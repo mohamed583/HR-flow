@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace backend_projetdev.Application.UseCases.Employe.Handlers
 {
-    public class GetEmployeDetailsQueryHandler : IRequestHandler<GetEmployeDetailsQuery, Result<EmployeDto>>
+    public class GetEmployeDetailsQueryHandler : IRequestHandler<GetEmployeDetailsQuery, Result<EmployeDetailsDto>>
     {
         private readonly IEmployeService _employeService;
         private readonly IMapper _mapper;
@@ -23,14 +23,14 @@ namespace backend_projetdev.Application.UseCases.Employe.Handlers
             _mapper = mapper;
         }
 
-        public async Task<Result<EmployeDto>> Handle(GetEmployeDetailsQuery request, CancellationToken cancellationToken)
+        public async Task<Result<EmployeDetailsDto>> Handle(GetEmployeDetailsQuery request, CancellationToken cancellationToken)
         {
             var employe = await _employeService.GetByIdAsync(request.Id);
             if (employe == null)
-                return Result<EmployeDto>.Failure("Employé non trouvé.");
+                return Result<EmployeDetailsDto>.Failure("Employé non trouvé.");
 
-            var dto = _mapper.Map<EmployeDto>(employe);
-            return Result<EmployeDto>.SuccessResult(dto);
+            var dto = _mapper.Map<EmployeDetailsDto>(employe);
+            return Result<EmployeDetailsDto>.SuccessResult(dto);
         }
     }
 }

@@ -23,6 +23,11 @@ export async function register({
 }
 
 export async function logout(refreshToken) {
+  const accessToken = localStorage.getItem("accessToken");
+
+  if (!accessToken || !refreshToken) {
+    throw new Error("Token manquant");
+  }
   await apiClient.post("/auth/logout", { refreshToken });
 }
 

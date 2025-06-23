@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./CandidatureList.css";
 import API_URL from "../../api/apiClient";
 
 const CandidatureList = ({ candidatures }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="candidature-list-container">
       <h2>Candidatures</h2>
@@ -29,6 +32,15 @@ const CandidatureList = ({ candidatures }) => {
               <p>
                 <strong>Statut :</strong> {getStatusLabel(candidature.status)}
               </p>
+
+              <div className="candidature-buttons">
+                <button
+                  className="details-button"
+                  onClick={() => navigate(`/candidature/${candidature.id}`)}
+                >
+                  Détails
+                </button>
+              </div>
             </li>
           ))}
         </ul>

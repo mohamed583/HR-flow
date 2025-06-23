@@ -1,0 +1,61 @@
+version: "3.8"
+
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourPass123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "test -f /var/opt/mssql/data/master.mdf"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - app-network
+    restart: on-failure
+
+  backend:
+    build:
+      context: ./backend-projet-dev
+      dockerfile: Dockerfile
+    container_name: backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=MonAppDb;User Id=sa;Password=YourPass123!;TrustServerCertificate=True;
+    ports:
+      - "5000:5000"
+    volumes:
+      - backend_wwwroot:/app/wwwroot
+    networks:
+      - app-network
+    restart: on-failure
+
+  frontend:
+    build:
+      context: ./frontend-projet-dev
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "5173:5173" 
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    restart: on-failure
+
+volumes:
+  sqlserver_data:
+  backend_wwwroot:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,42 @@
+.collegues-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.collegues-title {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.collegues-select {
+  margin-bottom: 2rem;
+  width: 250px;
+}
+
+.collegues-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.collegue-card {
+  padding: 1rem;
+  background-color: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.collegue-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.collegue-metier {
+  font-style: italic;
+  color: #666;
+}
+
+.collegue-statut {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}

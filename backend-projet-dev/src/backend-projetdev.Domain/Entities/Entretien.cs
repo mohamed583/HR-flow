@@ -7,7 +7,7 @@ namespace backend_projetdev.Domain.Entities
         public string Id { get; set; }
         public string CandidatureId { get; set; }
         public Candidature Candidature { get; set; }
-
+        public string? NewEmployeId { get; set; }
         public string EmployeId { get; set; }
         public Employe Employe { get; set; }
 

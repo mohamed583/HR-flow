@@ -1,4 +1,4 @@
-using backend_projetdev.API.Extensions;
+Ôªøusing backend_projetdev.API.Extensions;
 using backend_projetdev.API.Filters;
 using backend_projetdev.Application.DependencyInjection;
 using backend_projetdev.Infrastructure.DependencyInjection;
@@ -6,9 +6,15 @@ using backend_projetdev.Infrastructure.Persistence;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
 
-// DÈclaration du nom de la politique CORS
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    ContentRootPath = Directory.GetCurrentDirectory(),
+    WebRootPath = "wwwroot", // ‚Üê ici tu forces /app/wwwroot comme racine web
+    Args = args
+});
+
+// D√©claration du nom de la politique CORS
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 // Ajout de la politique CORS pour autoriser ton frontend React
@@ -31,7 +37,7 @@ builder.Services.AddPresentation(builder.Configuration); // Presentation (Swagge
 
 var app = builder.Build();
 
-// Applique automatiquement les migrations au dÈmarrage
+// Applique automatiquement les migrations au d√©marrage
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
@@ -50,7 +56,7 @@ app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "HR flow API V1");
-    c.RoutePrefix = string.Empty; // AccËs direct ‡ la racine
+    c.RoutePrefix = string.Empty; // Acc√®s direct √† la racine
 });
 
 // 3. Init Roles
