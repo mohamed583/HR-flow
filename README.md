@@ -32,6 +32,14 @@ dotnet add src/backend-projetdev.Infrastructure/backend-projetdev.Infrastructure
 
 ### Configuration de la base de données
 
+Passez vers le dossier appsettings.json situé dans backend-projetdev.API et changer la connectionStrings par:
+
+```bash
+"ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=backendProjetdev;Trusted_Connection=True;TrustServerCertificate=True"
+  },
+```
+
 Appliquez les migrations pour créer la base de données :
 
 ```bash
@@ -87,6 +95,16 @@ Lancez un container SQL Server pour la base de données :
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourPass123!" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
 ```
 
+### Changement de la configuration de la base de donnée dans le backend
+
+Ouvrez le projet backend et passez vers le dossier appsettings.json situé dans backend-projetdev.API et changer la connectionStrings par:
+
+```bash
+"ConnectionStrings": {
+    "DefaultConnection": "Server=host.docker.internal,1433;Database=MonAppDb;User Id=sa;Password=YourPass123!;TrustServerCertificate=True;"
+},
+```
+
 ### Démarrage du backend en container Docker
 
 Positionnez-vous dans le dossier backend :
@@ -114,6 +132,16 @@ Utilisez les paramètres suivants pour vous connecter sur SSMS (mot de passe : Y
 ![image](https://github.com/user-attachments/assets/7c4fe327-81ee-4f43-97de-c6b87ff096d4)
 
 ## 3. Exécution complète du projet (backend + frontend)
+
+### Changement de la configuration de la base de donnée dans le backend
+
+Ouvrez le projet backend et passez vers le dossier appsettings.json situé dans backend-projetdev.API et changer la connectionStrings par:
+
+```bash
+"ConnectionStrings": {
+    "DefaultConnection": "Server=db;Database=MonAppDb;User Id=sa;Password=YourPass123!;TrustServerCertificate=True;"
+},
+```
 
 ### Option 1 : via Docker Compose
 
@@ -184,3 +212,8 @@ Pour créer un admin manuellement :
   - Ajoutez une ligne avec l’id utilisateur et l’id rôle Employe dans la meme table.
 
 - Pour obtenir un accés avec les nouveaux rôles, reconnectez-vous.
+
+## 5. Création d’un openRouter API key
+
+- passez vers [OpenRouter](https://openrouter.ai/settings/keys) pour creer une clé API
+- Insérer la clé dans appsettings.json situé dans backend-projetdev.API du projet backend dans la variable OpenRouterApiKey

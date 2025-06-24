@@ -66,7 +66,7 @@ export const transformCandidatEnEmploye = async (data) => {
 };
 export const getCvMatchByPosteId = async (posteId) => {
   try {
-    const response = await apiClient.get(`/match/${posteId}`);
+    const response = await apiClient.get(`/candidature/match/${posteId}`);
     return response.data;
   } catch (err) {
     console.error("Erreur lors du fetch des scores AI:", err);

@@ -102,6 +102,7 @@ Réponds uniquement par un nombre.";
             var json = await response.Content.ReadAsStringAsync();
 
             using var doc = JsonDocument.Parse(json);
+            Console.WriteLine(doc.RootElement.ToString());
             var result = doc.RootElement
                 .GetProperty("choices")[0]
                 .GetProperty("message")

@@ -345,7 +345,7 @@
         }
       }
     },
-    "/match/{posteId}": {
+    "/candidature/match/{posteId}": {
       "get": {
         "tags": [
           "Candidature"
