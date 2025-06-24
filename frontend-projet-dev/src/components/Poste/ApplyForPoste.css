@@ -58,7 +58,9 @@
 }
 
 .apply-for-poste-container .error {
-  color: #f6c6d4; /* Rose pastel doux */
+  color: #8a2c39;
+  border: 1px solid #e3a5b5;
+  background-color: #f6c6d4; /* Rose pastel doux */
   font-size: 1rem;
   background-color: #f6c6d4;
   padding: 1rem;
